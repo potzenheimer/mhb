@@ -3,7 +3,7 @@
 ## Meetshaus
 
 * `Source code @ GitLab <https://github.com/potzenheimer/mhb>`_
-* `Staging <http://staging.integrationskurs-augsburg.de>`_
+* `Staging <https://staging.meetshaus.de>`_
 * `Deployment <https://meetshaus.de>`_
 
 ## Installation
@@ -13,7 +13,7 @@ a ready to work on setup. To get started with a new development environment
 clone the buildout to your local machine and initialize the buildout:
 
 ``` bash
-$ git clone git@git.team23.de/team23/adk.git
+$ git clone https://github.com/potzenheimer/mhb
 $ cd ./adk
 $ b5 install
 ```
