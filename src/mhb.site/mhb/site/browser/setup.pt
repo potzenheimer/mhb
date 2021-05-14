@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+         metal:use-macro="context/main_template/macros/master"
+         i18n:domain="adk.site">
+<body>
+
+<metal:main fill-slot="main">
+    <metal:content-core define-macro="main">
+
+        <div class="o-page__header">
+
+            <div class="o-page__section c-page-header">
+                <div class="c-page-header__title" tal:condition="python:context.Title()">
+                    <h1 class="c-page-header__headline c-page-header__headline--primary">
+                        <span tal:replace="python:context.Title()">
+                            Page Title</span>
+                    </h1>
+                </div>
+                <div class="c-page-header__subtitle">
+                    <p class="c-page-header__abstract">
+                        Test package setup code
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="o-page__main o-page__main--panels">
+
+            <section class="o-page__section o-page__section--main-content">
+
+            </section>
+
+        </div>
+
+        <div class="o-page__footer">
+
+        </div>
+
+    </metal:content-core>
+</metal:main>
+
+</body>
+</html>
+

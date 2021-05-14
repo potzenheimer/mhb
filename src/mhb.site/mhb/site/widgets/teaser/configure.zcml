@@ -1,0 +1,19 @@
+<configure
+        xmlns="http://namespaces.zope.org/zope"
+        xmlns:browser="http://namespaces.zope.org/browser"
+        xmlns:z3c="http://namespaces.zope.org/z3c"
+        i18n_domain="adk.site">
+
+    <!-- Content Widget Teaser -->
+
+    <browser:page
+            for="*"
+            name="content-widget-adk-teaser-links"
+            class="adk.site.widgets.teaser.teaser.ADKWidgetTeaserLinksInternal"
+            template="teaser-links-internal.pt"
+            permission="zope2.View"
+            layer="adk.site.interfaces.IADKSiteLayer"
+    />
+
+
+</configure>

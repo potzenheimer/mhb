@@ -1,0 +1,25 @@
+<div class="c-collage c-collage--default"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+         i18n:domain="ade25.widgets">
+    <div class="c-collage__main">
+        <div class="c-collage__items c-collage__items--${context/UID}"
+                 tal:condition="python:view.has_widget_item_nodes()"
+                 tal:define="items python:view.widget_content_items()"
+                 tal:attributes="class python:view.widget_content_list_class()">
+            <tal:items tal:repeat="widget_node items">
+                <tal:slide tal:condition="python:widget_node and widget_node['public']">
+                    <div class="c-collage__item"
+                             tal:attributes="class python:'c-collage__item c-collage__item--' + str(widget_node['uid'])"
+                             tal:condition="widget_node">
+
+                        <div class="c-collage__item-figure" tal:condition="python:widget_node['image']">
+                            <tal:image tal:define="image_tag python:widget_node['image']">
+                                <span tal:replace="structure image_tag" />
+                            </tal:image>
+                        </div>
+                    </div>
+                </tal:slide>
+            </tal:items>
+        </div>
+    </div>
+</div>

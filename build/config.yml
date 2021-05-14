@@ -1,0 +1,80 @@
+# This is the central configuration for all tools we use/execute. It is parsed inside
+# the Taskfile, too. See $CONFIG_application_web_path for example.
+version: 1.1.4
+project:
+  name: MHB
+  key: mhb
+  url: https://meetshaus.de/
+application:
+  key: mdh
+  styles:
+    src:
+      - rfs/scss/_rfs.scss
+      - sass-mq/_mq.scss
+  scripts:
+    src:
+      - flickity/dist/flickity.pkgd.js
+      - fontfaceobserver/fontfaceobserver.js
+      - lazysizes/lazysizes-umd.js
+      - lazysizes/plugins/parent-fit/ls.parent-fit.js
+      - requirejs/require.js
+      - respimage/respimage.js
+      - sortablejs/Sortable.min.js
+      - svg4everybody/dist/svg4everybody.js
+      - vh-check/dist/vh-check.min.js
+      - x-ray/dist/js/x-ray.js
+      - choices.js/public/assets/scripts/choices.min.js
+      - dropmic/dist/dropmic.js
+    app:
+      - scripts/accordion.js
+      - scripts/app.umd.js
+      - scripts/collapsible.js
+      - scripts/navbar.js
+      - scripts/paneleditor.js
+      - scripts/polyfills.js
+      - scripts/slider.js
+      - scripts/utils.js
+  mailcatcher:
+    protocol: smtp
+    url: mailcatcher:1025
+paths:
+  web: ../
+  db: ../_db
+  docker_data: ../_docker_data
+  site_theme: ../theme
+  site_theme_dist: ../resources/theme/mhb.theme
+  gulp_location: ../build/gulp
+  theme_app: ../../theme/
+  theme_base: ../../resources/theme/mhb.theme/
+  theme_dev: ../../theme/_site/
+  theme_dist: ../../resources/theme/mhb.theme/
+  theme_diazo: /++theme++mhb.theme/
+  theme_src: node_modules/
+  theme_theme: ../../theme/
+modules:
+  #virtualenv:
+  #  python_bin: python2
+  docker:
+      data_path: ../_docker_data
+      docker_compose_config_overrides: localhost
+      commands:
+        poetry:
+          service: python
+          bin: /usr/local/bin/poetry
+        npm: &npm
+          workdir: /app/build/gulp
+          bin: npm
+          service: node
+        gulp:
+          <<: *npm
+          bin: ./node_modules/.bin/gulp
+        jekyll:
+          workdir: /app/theme
+          bin: jekyll
+          service: jekyll
+        hugo:
+          workdir: /app/theme
+          bin: hugo
+          service: hugo
+  pipenv:
+  template:

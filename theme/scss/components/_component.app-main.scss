@@ -1,0 +1,77 @@
+$app-main-width:                    100%;
+$app-main-padding-top:              8rem;
+$app-main-padding-bottom:           calc(#{$app-spacer-base} * 2);
+
+// $app-main-background:               url('/assets/images/lined_paper.png') repeat 0 0 transparent;
+$app-main-background:               transparent;
+
+
+// App main section
+.app-main {
+    position: relative;
+    width: $app-main-width;
+    padding-top: $app-main-padding-top;
+    padding-bottom: calc(#{$app-main-padding-bottom} + #{$app-spacer-lg});
+    margin-left: auto;
+    margin-right: auto;
+    @include when-inside('.template-frontpage-view') {
+        padding-top: 0;
+    }
+    &.u-no-scroll {
+        position: fixed;
+        left: 0;
+        right: 0;
+        overflow-y: scroll; /* render disabled scroll bar to keep the same width */
+    }
+    @include mq($from: md, $until: lg) {
+        padding-top: calc(#{$app-main-padding-top} + 2rem );
+    }
+    @include mq($from: md) {
+        background: $app-main-background;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: $app-main-padding-bottom;
+        background: url('/assets/images/skyline.png') repeat-x 0 100% transparent;
+    }
+    @include mq($from: navbar) {
+        padding-top: 0;
+    }
+}
+
+.app-main--fullscreen {
+    padding: 0;
+}
+
+.app-main--grid {
+    @include make-container-max-widths();
+    @include mq($from: lg) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+
+.app-sidebar {
+    @include when-inside('.app-main--grid') {
+        @include mq($from: lg) {
+            flex: 1 0 25%;
+            max-width: 25%;
+        }
+    }
+}
+
+.app-content {
+    @include when-inside('.app-main--grid') {
+        @include mq($from: lg) {
+            flex: 1 0 75%;
+            max-width: 75%;
+            padding-right: $app-spacer-base;
+        }
+    }
+}

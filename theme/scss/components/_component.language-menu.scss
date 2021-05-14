@@ -1,0 +1,32 @@
+$c-language-menu-color:                 $app-color-text;
+
+.c-language-menu {
+    @include list-reset();
+    display: flex;
+    position: relative;
+    // padding-right: $app-spacer-base;
+    margin-bottom: 0;
+    @include mq($from: navbar) {
+        padding-right: 0;
+    }
+}
+
+.c-language-menu__item {
+    flex: 1 0 auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+.c-language-menu__link {
+    display: inline-block;
+    color: $c-language-menu-color;
+    font-weight: bold;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.c-language-menu__link-text {
+    display: inline-block;
+    padding: .6rem;
+}

@@ -1,0 +1,37 @@
+<header class="o-hero" tal:condition="python:view.has_content()">
+    <tal:block tal:define="widget_content python:view.widget_content()">
+        <div class="o-grid o-grid--lg o-grid--gutter">
+            <div class="o-grid__item--width-50">
+                <div class="c-page-header c-page-header--secondary">
+                    <div class="c-page-header__title c-page-header__title--secondary" tal:condition="python:widget_content['headline']">
+                        <h1 class="c-page-header__headline c-page-header__headline--primary">
+                            <span tal:replace="python:widget_content['headline']">
+                            Page Title</span>
+                        </h1>
+                    </div>
+                    <div class="c-page-header__subtitle c-page-header__subtitle--secondary" tal:condition="python:widget_content['abstract']">
+                        <p class="c-page-header__abstract c-page-header__abstract--secondary"
+                                 tal:content="python:widget_content['abstract']">
+                            Page Description
+                        </p>
+                    </div>
+                </div>
+                <div class="o-page__section o-page__section--spacer c-text-block">
+                    <div class="c-text-block__main">
+                        <div class="c-text-block__content" tal:condition="python:widget_content['text']">
+                            <div tal:define="rich_text python:widget_content['text']"
+                                     tal:replace="structure rich_text/output">
+                                Text Block
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="o-grid__item--width-50">
+                <div class="o-hero__aside" tal:condition="python:widget_content['image']">
+                    <span tal:replace="structure python:widget_content['image']" />
+                </div>
+            </div>
+        </div>
+    </tal:block>
+</header>

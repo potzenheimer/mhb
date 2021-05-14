@@ -1,0 +1,55 @@
+{
+  "name": "mhb",
+  "paths": {
+    "app": "../../theme/",
+    "base": "../../resources/theme/adk.theme/",
+    "dev": "../../theme/_site/",
+    "dist": "../../resources/theme/adk.theme/",
+    "diazoPrefix": "/++theme++adk.theme/",
+    "src": "node_modules/",
+    "theme": "../../theme/"
+  },
+  "favicon": {
+    "dataFile": "faviconData.json",
+    "masterPicture": "favicon.png",
+    "iconPath": "assets/ico/",
+    "ios": "#ffffff",
+    "windows": "#2d89ef",
+    "androidBackground": "#ffffff",
+    "androidColor": "#ffffff",
+    "safariColor": "#5bbad5",
+    "revisionKey": "iet7OjeChoz1",
+    "html": "_includes/base/head.html",
+    "htmlDist": "_includes/base/"
+  },
+  "sprite": {
+    "mode": {
+      "symbol": {
+        "prefix": "o-icon__",
+        "example": true,
+        "render": {
+          "scss": true
+        }
+      }
+    }
+  },
+  "styles": {
+    "src": ["rfs/scss/_rfs.scss", "sass-mq/_mq.scss"]
+  },
+  "scripts": {
+    "app": ["scripts/accordion.js", "scripts/app.umd.js", "scripts/collapsible.js", "scripts/navbar.js", "scripts/paneleditor.js", "scripts/polyfills.js", "scripts/slider.js", "scripts/utils.js"],
+    "src": ["flickity/dist/flickity.pkgd.js", "fontfaceobserver/fontfaceobserver.js", "lazysizes/lazysizes-umd.js", "lazysizes/plugins/parent-fit/ls.parent-fit.js", "requirejs/require.js", "respimage/respimage.js", "sortablejs/Sortable.min.js", "svg4everybody/dist/svg4everybody.js", "vh-check/dist/vh-check.min.js", "x-ray/dist/js/x-ray.js", "choices.js/public/assets/scripts/choices.min.js", "dropmic/dist/dropmic.js"]
+  },
+  "replacementPatterns": {
+    "base": [
+      {
+        "match": "/../../resources/theme/adk.theme/styles/",
+        "replacement": "/styles/"
+      },
+      {
+        "match": "/dist/styles/",
+        "replacement": "/styles/"
+      }
+    ]
+  }
+}

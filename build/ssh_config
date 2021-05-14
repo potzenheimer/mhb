@@ -1,0 +1,7 @@
+Host staging.adk
+HostName 78.47.44.130
+User root
+
+Host production.adk
+HostName 78.47.44.130
+User root

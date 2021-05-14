@@ -1,0 +1,59 @@
+{
+  "ratio-3:1": [
+    {
+      "id": "xs",
+      "name": "XS",
+      "size": "xs",
+      "width": "320",
+      "height": "103",
+      "direction": "down",
+      "quality": "auto"
+    },
+    {
+      "id": "sm",
+      "name": "SM",
+      "size": "sm",
+      "width": "540",
+      "height": "174",
+      "direction": "down",
+      "quality": "auto"
+    },
+    {
+      "id": "md",
+      "name": "MD",
+      "size": "md",
+      "width": "720",
+      "height": "232",
+      "direction": "down",
+      "quality": "auto"
+    },
+    {
+      "id": "lg",
+      "name": "LG",
+      "size": "lg",
+      "width": "960",
+      "height": "309",
+      "direction": "down",
+      "quality": "auto"
+    },
+    {
+      "id": "xl",
+      "name": "XL",
+      "size": "xl",
+      "width": "1140",
+      "height": "367",
+      "direction": "down",
+      "quality": "auto"
+    },
+    {
+      "id": "xxl",
+      "name": "XXL",
+      "size": "xxl",
+      "width": "1400",
+      "height": "451",
+      "direction": "down",
+      "quality": "auto"
+    }
+  ],
+  "aspect-ratio": "3/1"
+}

@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web:
+    ports:
+      - "8000:8000"
+  jekyll:
+    ports:
+      - "4000:4000"
+  hugo:
+    ports:
+      - "1313:1313"
+  mailcatcher:
+    ports:
+      - "1025:1025"
+      - "8002:1080"

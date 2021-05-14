@@ -1,0 +1,62 @@
+$c-tile-padding:                    $app-spacer-base;
+$c-tile-padding-sm:                 $app-spacer-sm;
+$c-tile-symbol-width:               2.5rem;
+
+.c-tiles {
+  display: block;
+  width: 100%;
+  overflow: visible;
+  padding-top: $app-spacer-base;
+  padding-bottom: $app-spacer-base;
+}
+
+.c-tiles__content {
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+.c-tiles__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.c-tiles__list-item {
+  flex: 1 0 100%;
+  padding-right: $grid-gutter-width;
+  padding-left: $grid-gutter-width;
+  @include mq($from: md) {
+    flex: 1 0 50%;
+    max-width: 50%;
+  }
+}
+
+.c-tile__header {
+  display: flex;
+  margin-bottom: $app-spacer-base;
+  padding-top: $c-tile-padding-sm;
+  padding-bottom: $c-tile-padding-sm;
+  border: 0 solid $app-color-white;
+  border-top-width: .125rem;
+  border-bottom-width: .125rem;
+}
+
+.c-tile__title {
+  flex: 1 0 auto;
+  font-family: $app-font-family-base;
+  font-size: $app-font-size-h3;
+}
+
+.c-tile__symbol {
+  display: flex;
+  align-items: center;
+  flex: 1 0 $c-tile-symbol-width;
+  max-width: $c-tile-symbol-width;
+}
+
+.c-tile__main {
+  padding-bottom: $c-tile-padding;
+  @include mq($from: md) {
+    padding-right: $c-tile-padding;
+  }
+}

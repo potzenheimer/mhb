@@ -1,0 +1,62 @@
+$c-colophon-link-color:                   $app-color-secondary;
+
+.c-colophon {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: $app-spacer-base;
+  @include mq($from: lg) {
+    &::before {
+      content: "";
+      display: block;
+      width: 135px;
+      height: 80px;
+      position: absolute;
+      top: calc(50% - 40px);
+      left: calc(50% - 65px);
+      background: url('/assets/images/brand-globe.png') no-repeat 50% 0 transparent;
+    }
+  }
+}
+
+.c-colophon__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.c-colophon__item {
+  flex: 1 0 100%;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  @include mq($from: lg) {
+    flex: 1 0 50%;
+    max-width: 50%;
+  }
+  &--meta {
+    padding-right: $app-spacer-base;
+    @include mq($from: lg) {
+      padding-right: 6.5rem;
+      text-align: right;
+      justify-content: flex-end;
+    }
+  }
+  &--copyright {
+    padding-left: $app-spacer-base;
+    @include mq($from: lg) {
+      padding-left: 6.5rem;
+    }
+  }
+}
+
+.c-colophon__link {
+  font-weight: 500;
+  color: $c-colophon-link-color;
+}
+
+.c-colophon__text {
+  font-weight: 500;
+  font-size: $app-font-size-sm;
+  line-height: 1.2;
+}

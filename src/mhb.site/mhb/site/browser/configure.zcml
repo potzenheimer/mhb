@@ -1,0 +1,34 @@
+<configure
+        xmlns="http://namespaces.zope.org/zope"
+        xmlns:browser="http://namespaces.zope.org/browser"
+        xmlns:z3c="http://namespaces.zope.org/z3c"
+        i18n_domain="mhb.site">
+
+    <!-- Control panels -->
+    <browser:page
+            name="mhb-site-setup"
+            for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+            class="mhb.site.browser.setup.SetupPackage"
+            permission="cmf.ManagePortal"
+            template="setup.pt"
+    />
+
+    <browser:page
+            name="mhb-site-setup-runner"
+            for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+            class="mhb.site.browser.setup.SetupPackageRunner"
+            permission="cmf.ManagePortal"
+    />
+
+    <!-- Site navigation -->
+    <browser:viewlet
+            name="mhb-site-quick-links-viewlet"
+            manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+            for="*"
+            class="mhb.site.browser.quicklinks.QuickLinksViewlet"
+            template="quick-links.pt"
+            permission="zope2.View"
+    />
+
+
+</configure>

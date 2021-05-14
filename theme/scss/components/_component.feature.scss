@@ -1,0 +1,15 @@
+$c-feature-bg-color:                       transparent;
+$c-feature-border-color:                   $app-color-gray;
+$c-feature-border-width:                   .25rem;
+$c-feature-spacer:                         $app-spacer-base;
+
+.c-feature {
+  background-color: $c-feature-bg-color;
+  padding: $c-feature-spacer;
+  border: 0 solid $c-feature-border-color;
+  border-width: $c-feature-border-width 0;
+  color: $app-color-primary;
+  font-weight: bold;
+  margin-top: $app-spacer-lg;
+  margin-bottom: $app-spacer-lg;
+}

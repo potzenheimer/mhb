@@ -1,0 +1,11 @@
+.o-hero {
+}
+
+.o-hero__aside {
+  display: none;
+  @include mq($from: md) {
+    display: block;
+    padding-left: $app-spacer-base;
+    padding-right: $app-spacer-base;
+  }
+}

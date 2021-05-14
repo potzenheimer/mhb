@@ -1,0 +1,13 @@
+$o-link-color:                      $app-color-secondary;
+$o-link-color-hover:                $app-color-secondary-dark;
+
+
+.o-link {
+  color: $o-link-color;
+  &:hover {
+    color: $o-link-color-hover;
+    @if $anchor-transitions-active == true {
+      transition: $anchor-transition;
+    }
+  }
+}

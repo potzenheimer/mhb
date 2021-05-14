@@ -1,0 +1,25 @@
+<div class="c-action-bar c-action-bar--footer">
+    <div class="c-action-bar__item c-action-bar__item--social-menu">
+        {% include components/component-social-menu.html %}
+    </div>
+    <div class="c-action-bar__item c-action-bar__item--language-switcher">
+        <ul class="c-language-menu">
+            <li class="c-language-menu__item">
+                <a class="c-language-menu__link" href="/@@language-root-switcher" aria-label="Switch language">
+                    <svg class="o-icon o-icon--spacer o-icon--size-2-5 o-icon__ui--language-dims">
+                        <use xlink:href="/assets/symbol/svg/sprite.symbol.svg#ui--language"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="c-action-bar__item c-action-bar__item--cta">
+        <div class="c-action-bar__button">
+            <a class="c-button c-button--primary c-button--register" href="/@@booking-form">
+                <span class="u-visible--lang-en">Register</span>
+                <span class="u-visible--lang-de">Anmelden</span>
+            </a>
+        </div>
+    </div>
+</div>
+

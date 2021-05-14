@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      lang="en" i18n:domain="adk.site">
+<body>
+<div metal:define-macro="adk-site-quick-links"
+         i18n:domain="adk.site">
+    <h5>This is the quick links viewlet</h5>
+    <tal:quick-links tal:condition="view/available">
+        <ul class="o-dropdown__list" id="app-quick-links"
+                 tal:define="links python:view.quick_links()">
+            <tal:links tal:repeat="link links">
+                <a class="c-colophon__link" href="#link-target-0"
+                         tal:attributes="href python:link['link']">
+                    <span class="o-colophon__link-name" tal:content="python:link['name']">Link Title</span>
+                    <tal:separator tal:condition="not:repeat/link/end">&ndash;</tal:separator>
+                </a>
+            </tal:links>
+        </ul>
+    </tal:quick-links>
+    <tal:privacy tal:condition="python:view.privacy_link()">
+        <a class="c-button c-button--primary" id="app-privacy-link" href="#link-target-0"
+                tal:define="link python:view.privacy_link()"
+                 tal:attributes="href python:link['link']">
+            <span class="o-colophon__link-name" tal:replace="python:link['name']">Link Title</span>
+        </a>
+    </tal:privacy>
+</div>
+</body>
+</html>

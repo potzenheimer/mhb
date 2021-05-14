@@ -1,0 +1,87 @@
+<div class="o-page__section o-page__section--spacer"
+    tal:condition="python:view.has_content()"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <tal:block tal:define="widget_content python:view.widget_content()">
+        <div class="c-page-header c-page-header--default" >
+            <div class="c-page-header__title c-page-header__title--default" tal:condition="python:widget_content['headline']">
+                <h3 class="c-page-header__headline c-page-header__headline--default">
+                        <span tal:replace="python:widget_content['headline']">
+                            Page Title</span>
+                </h3>
+            </div>
+        </div>
+        <div class="c-text-block__main" tal:condition="python:not widget_content['card_text']">
+            <div class="c-text-block__content" tal:condition="python:widget_content['text']">
+                <div tal:define="rich_text python:widget_content['text']"
+                        tal:replace="structure rich_text/output">
+                    Text Block
+                </div>
+            </div>
+        </div>
+        <div class="o-grid o-grid--gutter" tal:condition="python:widget_content['card_text']">
+            <div class="o-grid__item o-grid__item--width-66">
+                <div class="c-text-block__main">
+                    <div class="c-text-block__content" tal:condition="python:widget_content['text']">
+                        <div tal:define="rich_text python:widget_content['text']"
+                                 tal:replace="structure rich_text/output">
+                            Text Block
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="o-grid__item o-grid__item--width-33">
+                <div class="c-card c-card--page-section" tal:condition="python:widget_content['card_text']">
+                    <div class="c-card__main">
+                        <div class="c-card__header">
+                            <div class="c-card__title" tal:define="action_icon python:widget_content['card_icon']">
+                                <svg class="o-icon o-icon-widget-text-block-dims"
+                                         tal:attributes="class python:'o-icon o-icon--size-3 o-icon--spacer o-icon--muted o-icon-' + action_icon + '-dims'">
+                                    <use xlink:href="/assets/symbol/svg/sprite.symbol.svg#icon--{action_icon}-block"
+                                             tal:attributes="xlink:href python:'/assets/symbol/svg/sprite.symbol.svg#' + action_icon"></use>
+                                </svg>
+
+                                <span class="c-card__title-text" tal:condition="python:widget_content['card_headline']"
+                                    tal:content="python:widget_content['card_headline']"></span>
+                                <span class="c-card__title-text" tal:condition="python:not widget_content['card_headline']"
+                                        i18n:translate="">Information</span>
+                            </div>
+                        </div>
+                        <div class="c-card__section">
+                            <div class="c-card__abstract" tal:condition="python:widget_content['card_text']">
+                                <div tal:define="rich_text python:widget_content['card_text']"
+                                         tal:replace="structure rich_text/output">
+                                    Text Block
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-card c-card--page-section" tal:condition="python:widget_content['card_text_secondary']">
+                    <div class="c-card__main">
+                        <div class="c-card__header">
+                            <div class="c-card__title" tal:define="action_icon python:widget_content['card_icon_secondary']">
+                                <svg class="o-icon o-icon-widget-text-block-dims"
+                                         tal:attributes="class python:'o-icon o-icon--size-3 o-icon--spacer o-icon--muted o-icon-' + action_icon + '-dims'">
+                                    <use xlink:href="/assets/symbol/svg/sprite.symbol.svg#icon--{action_icon}-block"
+                                             tal:attributes="xlink:href python:'/assets/symbol/svg/sprite.symbol.svg#' + action_icon"></use>
+                                </svg>
+                                <span class="c-card__title-text" tal:condition="python:widget_content['card_headline_secondary']"
+                                         tal:content="python:widget_content['card_headline_secondary']"></span>
+                                <span class="c-card__title-text" tal:condition="python:not widget_content['card_headline_secondary']"
+                                         i18n:translate="">Information</span>
+                            </div>
+                        </div>
+                        <div class="c-card__section">
+                            <div class="c-card__abstract" tal:condition="python:widget_content['card_text_secondary']">
+                                <div tal:define="rich_text python:widget_content['card_text_secondary']"
+                                         tal:replace="structure rich_text/output">
+                                    Text Block
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </tal:block>
+</div>

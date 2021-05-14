@@ -1,0 +1,98 @@
+//
+// Header
+// ------------------------------------------
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 4rem;
+    z-index: 100;
+    display: block;
+    background-color: $app-color-white;
+    border-top: .25rem solid $app-color-primary;
+    @include media-breakpoint-up(md) {
+        margin: 0 auto 1rem;
+        @include when-inside('.plone-toolbar-left') {
+            left: 60px;
+            width: calc(100vw - 60px);
+        }
+        @include when-inside('.plone-toolbar-left-expanded') {
+            left: 120px;
+            width: calc(100vw - 120px);
+        }
+    }
+    @include mq($from: navbar) {
+        min-height: 8rem;
+        position: static;
+        background-color: transparent;
+    }
+}
+
+.app-header--offset {
+    border-bottom: 1px solid $app-color-gray-lighter;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.c-header {
+    padding-top: 1.5rem;
+    @include make-container-max-widths();
+}
+
+.app-header__content {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    @include mq($from: navbar) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        padding-top: $app-spacer-base;
+        padding-bottom: $app-spacer-base;
+        margin-right: auto;
+        margin-left: auto;
+        @include make-container-max-widths();
+    }
+}
+
+.app-header__section {
+    display: block;
+    position: relative;
+    width: 50%;
+    max-width: 50%;
+    flex: 0 0 50%;
+    &:first-child {
+        width: 50%;
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+    @include mq($from: navbar) {
+        width: 16.6666%;
+        flex: 0 0 16.6666%;
+        &:first-child {
+            width: 50%;
+            max-width: 50%;
+            flex: 0 0 50%;
+        }
+        &--burger {
+            @include mq($from: navbar) {
+                display: none;
+            }
+        }
+    }
+    &--meta-nav {
+        display: none;
+        @include mq($from: navbar) {
+            display: block;
+            width: 50%;
+            max-width: 50%;
+            flex: 0 0 50%;
+        }
+    }
+}
+
+.app-header__section--quick-links {
+    display: flex;
+}

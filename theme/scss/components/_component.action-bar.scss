@@ -1,0 +1,41 @@
+.app-action-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 6rem;
+  background-color: $app-color-white;
+  border-top: .125rem solid $app-color-primary;
+  @include mq($from: navbar) {
+    display: block;
+  }
+  &--offset {
+    @include mq($from: navbar) {
+      display: none;
+    }
+  }
+}
+
+.app-action-bar--offset {
+  bottom: 0;
+}
+
+.c-action-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+}
+
+.c-action-bar__item {
+  flex: 1 0 auto;
+}
+
+.c-action-bar__button {
+  text-align: center;
+  @include mq($from: navbar) {
+    position: fixed;
+    top:.25rem;
+    right: $app-spacer-lg;
+  }
+}

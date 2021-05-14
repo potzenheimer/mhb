@@ -1,0 +1,390 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-10-13 11:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: adk.site\n"
+
+#: adk.site/adk/site/configure.zcml
+msgid "ADK Site"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Advanced"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Airport transfer"
+msgstr ""
+
+#: adk.site/adk/site/vocabulary.py
+msgid "Alert"
+msgstr ""
+
+#: adk.site/adk/site/vocabulary.py
+msgid "Bullhorn"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "By sending this message, I confirm that my details are correct and I agree to the collection and further processing of the provided data. The data will only be used for the purpose stated in your inquiry."
+msgstr ""
+
+#: adk.site/adk/site/vocabulary.py
+msgid "Calendar"
+msgstr ""
+
+#: adk.site/adk/site/browser/registration.pt
+msgid "Cancel"
+msgstr ""
+
+#: adk.site/adk/site/vocabulary.py
+msgid "Certificate"
+msgstr ""
+
+#: adk.site/adk/site/vocabulary.py
+msgid "Chalkboard and Teacher"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "City"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Country"
+msgstr ""
+
+#: adk.site/adk/site/browser/registration.pt
+msgid "Course Registration"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Course duration in weeks"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Course stating date"
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+#: adk.site/adk/site/widgets/teaser/interfaces.py
+msgid "Cover Image"
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+msgid "Cover Image Alt Text"
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+#: adk.site/adk/site/widgets/teaser/interfaces.py
+msgid "Cover Image Copyright Information"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Date of Birth"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Day of arrival"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Day of departure"
+msgstr ""
+
+#: adk.site/adk/site/vocabulary.py
+msgid "Download"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Elementary"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Email"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Female"
+msgstr ""
+
+#: adk.site/adk/site/browser/registration.pt
+msgid "Fields marked with <code>*</code> are required."
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "First name"
+msgstr ""
+
+#: adk.site/adk/site/browser/registration.pt
+msgid "Form submission failed"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Gender"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "German language skills"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Good"
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+msgid "Headline"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Herby, I register for following course"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Host family, double room, half board"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Host family, single room, full board"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Host family, single room, half board"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Hotel or guesthouse"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "I have acknowledged the "
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+msgid "Info Card 1: Headline"
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+msgid "Info Card 1: Icon"
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+msgid "Info Card 1: Text"
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+msgid "Info Card 2: Headline"
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+msgid "Info Card 2: Icon"
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+msgid "Info Card 2: Text"
+msgstr ""
+
+#: adk.site/adk/site/vocabulary.py
+msgid "Information"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Intensive Courses"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Intermediate"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Last name"
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+#: adk.site/adk/site/widgets/teaser/interfaces.py
+msgid "Link"
+msgstr ""
+
+#: adk.site/adk/site/widgets/teaser/interfaces.py
+msgid "Link Icon"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Male"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Message"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Nationality"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "No accommodation needed"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "None"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Occupation"
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+msgid "Optional internal or external link that will be used as redirection target when section is accessed.Logged in users will see the target link instead."
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Other"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Personnel Information"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Phone"
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+msgid "Please enter the page main headline (H1)."
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+msgid "Please enter the page section headline (H2)."
+msgstr ""
+
+#: adk.site/adk/site/widgets/teaser/interfaces.py
+msgid "Please select link target"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Please specify your booking request"
+msgstr ""
+
+#: adk.site/adk/site/browser/registration.pt
+msgid "Please use the following form to register for a course at ADK German Courses."
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Please use the format DD.MM.YYYY"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Postcode"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Preferred type of accommodation"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Privacy Agreement"
+msgstr ""
+
+#: adk.site/adk/site/browser/registration.pt
+msgid "Register"
+msgstr ""
+
+#: adk.site/adk/site/vocabulary.py
+msgid "School"
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+msgid "Select adequate icon for the info card"
+msgstr ""
+
+#: adk.site/adk/site/widgets/teaser/interfaces.py
+msgid "Select adequate icon for the linked section"
+msgstr ""
+
+#: adk.site/adk/site/configure.zcml
+msgid "Site specific configuration and content widgets for panel pages"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Street"
+msgstr ""
+
+#: adk.site/adk/site/vocabulary.py
+msgid "Suitcase"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "Summer Courses for Teenagers"
+msgstr ""
+
+#: adk.site/adk/site/vocabulary.py
+msgid "Sun"
+msgstr ""
+
+#: adk.site/adk/site/widgets/teaser/interfaces.py
+msgid "Teaser Headline"
+msgstr ""
+
+#: adk.site/adk/site/widgets/teaser/interfaces.py
+msgid "Teaser Title"
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+#: adk.site/adk/site/widgets/teaser/interfaces.py
+msgid "Text"
+msgstr ""
+
+#: adk.site/adk/site/browser/registration.pt
+msgid "There have been errors submitting your form"
+msgstr ""
+
+#: adk.site/adk/site/browser/registration.py
+msgid "This field is required"
+msgstr ""
+
+#: adk.site/adk/site/configure.zcml
+msgid "Uninstall ADK Content Widgets (adk.site)"
+msgstr ""
+
+#: adk.site/adk/site/configure.zcml
+msgid "Uninstall content widgets and integrations"
+msgstr ""
+
+#: adk.site/adk/site/widgets/teaser/interfaces.py
+msgid "Use the abstract to provide a short description of .the linked page content."
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+msgid "Use the abstract to provide a short description of .the page content."
+msgstr ""
+
+#: adk.site/adk/site/widgets/content/interfaces.py
+msgid "Use the image alt text for a short explaination of the image contents. This is SEO relevant information."
+msgstr ""
+
+#: adk.site/adk/site/vocabulary.py
+msgid "Video"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "and accept it."
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "host family, double room, full board"
+msgstr ""
+
+#: adk.site/adk/site/config.py
+msgid "privacy policy"
+msgstr ""

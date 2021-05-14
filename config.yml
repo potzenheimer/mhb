@@ -1,0 +1,20 @@
+baseURL: "/"
+languageCode: "de-de"
+title: "MHB"
+disableKinds: ["RSS", "taxonomy", "taxonomyTerm"]
+publishDir: "theme/_site"
+
+module:
+  mounts:
+    - source: dist
+      target: static/docs/5.0/dist
+    - source: theme/templates/assets
+      target: assets
+    - source: theme/templates/content
+      target: content
+    - source: theme/templates/data
+      target: data
+    - source: theme/templates/layouts
+      target: layouts
+    - source: theme/templates/static
+      target: static

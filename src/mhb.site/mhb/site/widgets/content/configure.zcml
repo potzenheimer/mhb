@@ -1,0 +1,36 @@
+<configure
+        xmlns="http://namespaces.zope.org/zope"
+        xmlns:browser="http://namespaces.zope.org/browser"
+        xmlns:z3c="http://namespaces.zope.org/z3c"
+        i18n_domain="adk.site">
+
+    <!-- Content Page Header -->
+    <browser:page
+            for="*"
+            name="content-widget-adk-page-section-header"
+            class=".page.WidgetADKPageSectionHeader"
+            template="page-section-header.pt"
+            permission="zope2.View"
+            layer="...interfaces.IADKSiteLayer"
+    />
+
+    <browser:page
+            for="*"
+            name="content-widget-adk-page-section"
+            class=".page.WidgetADKPageSection"
+            template="page-section.pt"
+            permission="zope2.View"
+            layer="...interfaces.IADKSiteLayer"
+    />
+
+    <browser:page
+            for="*"
+            name="content-widget-adk-page-hero"
+            class=".page.WidgetADKPageHero"
+            template="page-hero.pt"
+            permission="zope2.View"
+            layer="...interfaces.IADKSiteLayer"
+    />
+
+
+</configure>

@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:z3c="http://namespaces.zope.org/z3c"
+    i18n_domain="hph.widgets">
+
+
+    <!-- image widgets -->
+    <include package=".content" />
+    <include package=".gallery" />
+    <include package=".teaser" />
+
+
+
+</configure>

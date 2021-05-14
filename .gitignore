@@ -1,0 +1,75 @@
+## General ignores
+# temp files
+*~
+.*.marks
+\#*\#
+.~lock.*#
+.DS_Store
+# IntelliJ IDEA and similar
+/*.iml
+/*/*.iml
+/.idea
+# as a convention ignore all directories starting with "_" in the repository root
+/_*/*
+
+## Build files
+/build/Taskfile.local
+/build/config.local.yml
+/build/local.yml
+/build/ENV/
+/build/.venv/
+/build/gulp/node_modules/
+/build/docker-compose.override.yml
+/build/docker/*/site.conf
+
+## Default web files
+!build
+*-ck.js
+*.EGG
+*.egg
+*.EGG-INFO
+*.egg-info
+*.mo
+*.pyc
+*.pyo
+.bzr
+.codeintel
+.hg
+.installed.cfg
+.mr.developer.cfg
+.svn
+ba
+bin
+bower_components
+build/ENV
+coverage
+develop-eggs
+dist
+downloads
+eggs
+etc/**/*
+fabfile.py
+fake-eggs
+include
+known-good-versions.cfg
+lib
+parts
+pip-*
+src/ade25.*
+src/bobtemplates.*
+src/collective.*
+src/diazo
+src/mockup
+src/Plone
+src/plone.*
+src/plonetheme.*
+src/Products.*
+src/sauna.reload
+src/vwc.*
+src/watchdog
+src/z3c.*
+src/zodbupdate
+var
+
+local.cfg
+

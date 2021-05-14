@@ -1,0 +1,17 @@
+<configure
+        xmlns="http://namespaces.zope.org/zope"
+        xmlns:browser="http://namespaces.zope.org/browser"
+        xmlns:z3c="http://namespaces.zope.org/z3c"
+        i18n_domain="hph.widgets">
+
+    <!-- Content widget Image Poster -->
+    <browser:page
+            for="*"
+            name="content-widget-adk-collage"
+            class="adk.site.widgets.gallery.collage.collage.ADKWidgetGalleryCollage"
+            template="collage.pt"
+            permission="zope2.View"
+            layer="adk.site.interfaces.IADKSiteLayer"
+    />
+
+</configure>

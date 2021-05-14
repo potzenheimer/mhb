@@ -1,0 +1,16 @@
+a:not(class) {
+    color: $anchor-color-default;
+    &:hover {
+        color: $anchor-color-highlight;
+        @if $anchor-transitions-active == true {
+            transition: $anchor-transition;
+        }
+    }
+    @include when-inside('.o-page__body-text') {
+        font-weight: 600;
+        color: $app-color-secondary;
+        &:hover {
+            color: $app-color-secondary-dark;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+watchdog = "*"
+fabdeploit = "*"
+requests = {extras = ["security"], version = "*"}
+"ade25.fabfiles" = {git = "git://github.com/ade25/ade25.fabfiles", ref = "master"}
+fabric = "<2.0"
+
+[dev-packages]
+
+[requires]
+python_version = "2.7"

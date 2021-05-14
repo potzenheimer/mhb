@@ -1,0 +1,58 @@
+$c-social-menu-color:                       $app-color-text;
+$c-social-menu-background-color:            $app-color-gray-light;
+$c-social-menu-border-width:                1px;
+$c-social-menu-border-style:                solid;
+$c-social-menu-border-color:                $c-social-menu-background-color;
+$c-social-menu-border-radius:               0;
+
+.c-social-menu {
+    @include list-reset();
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+.c-social-menu--primary {
+    margin: 0 auto 1rem auto;
+}
+
+.c-social-menu__item {
+    display: none;
+    flex: 1 0 auto;
+    max-width: 100%;
+    text-align: center;
+    &:not(:first-child) {
+        margin-left: $app-spacer-sm;
+    }
+    &--default {
+        @include mq($from: navbar) {
+            display: block;
+        }
+    };
+    &--primary {
+        display: block;
+    }
+}
+
+.c-social-menu__link {
+    display: inline-block;
+    color: $c-social-menu-color;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.c-social-menu__link-text {
+    display: none;
+    @include mq($from:navbar) {
+        display: inline-block;
+    }
+}
+
+.c-social-menu__link--button {
+    background-color: $c-social-menu-background-color;
+    border: $c-social-menu-border-width $c-social-menu-border-style $c-social-menu-border-color;
+    border-radius: $c-social-menu-border-radius;
+}

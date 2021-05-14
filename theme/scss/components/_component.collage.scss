@@ -1,0 +1,23 @@
+.c-collage {
+  display: block;
+  width: 100%;
+}
+
+.c-collage__items {
+  @include grid();
+  @include gridAuto();
+}
+
+.c-collage__item {
+  background-color: $app-color-white;
+  padding: $app-spacer-sm $app-spacer-sm $app-spacer-base;
+  @include when-inside('.c-collage__items--1') {
+    width: 33.3333%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+ }
+
+.c-collage__item-figure {
+  border: 1px solid $app-color-gray-lightest;
+}
