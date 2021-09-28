@@ -1,0 +1,20 @@
+///* ========================================================================
+//   #CONFIG
+//   ======================================================================== */
+// Custom web font
+$app-font-family-base:              "Lora";
+$app-font-family-light:             "Montserrat";
+$app-font-family-medium:            "Lora";
+$app-font-family-strong:            "Lora";
+$app-font-family-italic:            "Lora";
+
+// Configure site font stack
+$app-font-family-serif:             $app-font-family-base, "Times New Roman", Times, Georgia, serif;
+$app-font-family-sans-serif:        $app-font-family-light, "Lucida Grande", Tahoma, Sans-Serif;
+
+$app-font-weight-base-custom:       $app-font-weight-base;
+$app-font-weight-strong-custom:     700;
+$app-font-weight-italic-custom:     500;
+
+// Responsive font size support
+$app-enable-responsive-font-sizes:  true;

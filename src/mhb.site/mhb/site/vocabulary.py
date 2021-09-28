@@ -7,7 +7,7 @@ from zope.schema. interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
-from adk.site import _
+from mhb.site import _
 
 
 @implementer(IVocabularyFactory)

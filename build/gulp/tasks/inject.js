@@ -26,8 +26,9 @@ export function inject() {
                     return '<link rel="preload" href="' + filepath + '" as="style">\n' +
                         '<link rel="stylesheet" href="' + filepath + '" media="print" onload="this.media=\'all\'">'
                 }
-            });
-        ))
+            }
+        ),
+        )
         // Output the file back into it's directory
         .pipe(gulp.dest(cfg.paths.dev))
 };

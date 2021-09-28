@@ -1,0 +1,110 @@
+$c-link-tile-border-color:              $app-color-gray-lightest;
+
+.c-link-tile {
+    display: flex;
+    flex-direction: column;
+    background: $app-color-white;
+    border: 1px solid $app-color-gray;
+    padding: $app-spacer-base;
+    @include mq($from: lg) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    box-shadow: none;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    &:hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+}
+
+.c-link-tile__aside {
+    width: 100%;
+    max-width: 100%;
+    @include mq($from: lg) {
+        flex: 0 0 50%;
+        max-width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.c-link-tile__main {
+    width: 100%;
+    @include mq($from: lg) {
+        flex: 0 0 50%;
+        max-width: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.c-link-tile__footer {
+    width: 100%;
+    color: $app-color-white;
+    background: $app-color-secondary;
+    @include mq($from: lg) {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.c-link-tile__asset {
+    display: block;
+}
+
+.c-link-tile__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    @include mq($from: md) {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+.c-link-tile__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: $app-spacer-base;
+    margin-bottom: $app-spacer-base;
+    @include mq($from: md) {
+        text-align: center;
+    }
+}
+
+.c-link-tile__title {
+    font-size: $app-font-size-h3;
+    color: $app-color-secondary;
+}
+
+.c-link-tile__abstract {
+    margin-bottom: $app-spacer-base;
+}
+
+.c-link-tile__body {
+    font-weight: 300;
+}
+
+ .c-link-tile__link {
+     display: block;
+     width: 100%;
+     color: $app-color-text;
+     &:hover {
+         text-decoration: none;
+         color: darken($app-color-text, 15%);
+     }
+     &--primary {
+         color: $app-color-secondary;
+         &:hover {
+             color: darken($app-color-secondary, 15%);
+         }
+     }
+     @include mq($from: md) {
+         padding: $app-spacer-base;
+     }
+
+ }

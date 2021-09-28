@@ -1,0 +1,9 @@
+$blockquote-font-family:             Georgia;
+
+
+blockquote {
+  font-size: $app-font-size-base;
+  font-family: $blockquote-font-family;
+  font-weight: 300;
+  font-style: italic;
+}

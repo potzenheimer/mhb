@@ -6,6 +6,7 @@ GULP_LOCATION="${CONFIG_paths_gulp_location:-'I have no gulp location'}"
 ALLOWED_SETUP_REQUIRED=("yes", "no")
 DEFAULT_SETUP_REQUIRED="no"
 WEBROOT="${CONFIG_paths_web:-../}"
+DB_DUMP_LOCAL_PATTERN="${CONFIG_paths_db}/$( date "+%Y-%m-%d" )-${CONFIG_project_key}-local.fs"
 
 task:setup() {
     cp ${SITE_THEME}/package.json ${GULP_LOCATION}
@@ -14,15 +15,15 @@ task:setup() {
 task:install() {
     #pipenv:install
     docker:install
-    poetry:install
-    docker:command:npm install
+    poetry install
+    npm install
     template:render --overwrite ask-if-older templates/config.local.yml.jinja2 config.local.yml
     template:render --overwrite ask-if-older templates/local.cfg.jinja2 ../local.cfg
 }
 
 task:install:theme() {
     task:setup
-    docker:command:npm install
+    npm install
 }
 
 task:install:plone() {
@@ -32,7 +33,8 @@ task:install:plone() {
 task:update() {
     pipenv:update
     docker:update
-    docker:command:npm install
+    poetry install
+    npm install
     template:render --overwrite ask-if-older templates/config.local.yml.jinja2 config.local.yml
     template:render --overwrite ask-if-older templates/local.cfg.jinja2 ../local.cfg
 }
@@ -112,6 +114,10 @@ task:watch() {
     virtualenv:run fab watch
 }
 
+task:poetry() {
+    docker:command:poetry "$@"
+}
+
 ######################################################
 ##### Theme build
 ######################################################
@@ -151,7 +157,7 @@ task:theme:setup() {
 }
 
 task:theme:html() {
-    docker:command:jekyll build
+    hugo build
 }
 
 task:theme:css() {
@@ -180,8 +186,12 @@ task:theme:dist() {
     docker:command:gulp dist
 }
 
-task:npm() {
+npm() {
     docker:command:npm "$@"
+}
+
+task:npm() {
+    npm "$@"
 }
 
 task:jekyll() {
@@ -227,20 +237,65 @@ task:shell:zeo() {
 #    virtualenv:run fab "$1" download:"${2:-}"
 #}
 
+##########################################################
+# Database Tasks for importing and exporting sql dumps   #
+##########################################################
+
+task:db:export() {
+    mkdir -p "${CONFIG_paths_db}" && \
+    rsync -avzhe ../var/filestorage/Data.fs "${CONFIG_paths_db}/${$DB_DUMP_LOCAL_PATTERN}"
+}
+
+task:db:import() {
+    local DUMPNAME=${1:-}
+    if [ -z "$DUMPNAME" ]
+    then
+        DUMPNAME="production"
+    fi
+    case "${DUMPNAME}" in
+        production)
+            DUMPNAME="${CONFIG_paths_db}/${CONFIG_project_key}_live_$( date "+%Y-%m-%d" ).sql.gz"
+            ;;
+        staging)
+            DUMPNAME="${CONFIG_paths_db}/${CONFIG_project_key}_staging_$( date "+%Y-%m-%d" ).sql.gz"
+            ;;
+        testing)
+            DUMPNAME="${CONFIG_paths_db}/${CONFIG_project_key}_testing_$( date "+%Y-%m-%d" ).sql.gz"
+            ;;
+        local)
+            DUMPNAME="$DB_DUMP_LOCAL_PATTERN"
+            ;;
+    esac
+    if [ ! -e "${CONFIG_paths_db}/${DUMPNAME}" ]
+    then
+        echo "Dump does not exist"
+        echo "(${CONFIG_paths_db}/${DUMPNAME})"
+        return 1
+    fi
+    rsync -avzhe "${CONFIG_paths_db}/${DUMPNAME}" ../var/filestorage/Data.fs
+}
+
 task:db:download() {
 	# !!! caution staging path not defined
+	  mkdir -p "${CONFIG_paths_db}" && \
     if [ "$1" = "production" ]
-             then rsync -avzhe 'ssh -F ssh_config' --exclude='_processed_/' production.adk:/opt/adk/var/filestorage/Data.fs ${WEBROOT}/var/filestorage/
+             then rsync -avzhe 'ssh -F ssh_config' --exclude='_processed_/' production.mhb:/opt/mhb/var/filestorage/Data.fs ${WEBROOT}/var/filestorage/
         elif [ "$1" = "staging" ]
-        	 then echo "staging path not defined"
+        	 #then echo "staging path not defined"
+        	 then rsync -avzhe 'ssh -F ssh_config' --exclude='_processed_/' staging.mhb:/opt/sites/meetshaus/buildout.meetshaus/var/filestorage/Data.fs "${CONFIG_paths_db}/${CONFIG_project_key}_staging_$( date "+%Y-%m-%d" ).fs"
+
         else echo "Argument missing: server name"
     fi
+}
+
+task:db:migrate() {
+  cd ../ && bin/zodbupdate --convert-py3 --file=var/filestorage/Data.fs --encoding=utf8
 }
 
 task:db:download:blobs() {
 	# !!! caution staging path not defined
     if [ "$1" = "production" ]
-             then rsync -avzhe 'ssh -F ssh_config' --exclude='_processed_/' production.adk:/opt/adk/var/blobstorage/* ${WEBROOT}/var/blobstorage/
+             then rsync -avzhe 'ssh -F ssh_config' --exclude='_processed_/' production.mhb:/opt/adk/var/blobstorage/* ${WEBROOT}/var/blobstorage/
         elif [ "$1" = "staging" ]
         	 then echo "staging path not defined"
         else echo "Argument missing: server name"

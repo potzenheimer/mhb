@@ -66,7 +66,7 @@ $app-color-gray-contrast-secondary:     $color-mine-shaft;
 //## Used in mixin and modifier classes
 
 //** Primary brand color
-$app-color-primary-base:              $color-st-tropaz !default;
+$app-color-primary-base:              $color-brandy-punch !default;
 $app-color-primary-darker:            darken($app-color-primary-base, 15%)  !default;
 $app-color-primary-dark:              darken($app-color-primary-base, 7.5%) !default;
 $app-color-primary:                   $app-color-primary-base               !default; // #274d38

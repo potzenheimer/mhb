@@ -1,0 +1,58 @@
+$c-testimonial-font-family:                 $app-font-family-italic;
+$c-testimonial-font-size:                   $app-font-size-base;
+$c-testimonial-font-size-sm:                $app-font-size-sm;
+$c-testimonial-font-weight:                 500;
+
+$c-testimonial-decorator-width:             .125rem;
+$c-testimonial-decorator-height:            100%;
+$c-testimonial-decorator-color:             $app-color-white;
+
+.c-testimonials {
+    display: block;
+}
+
+.c-testimonial {
+    display: block;
+    position: relative;
+    font-family: $c-testimonial-font-family;
+    font-size: $c-testimonial-font-size-sm;
+    font-weight: $c-testimonial-font-weight;
+}
+
+.c-testimonial__main {
+    display: flex;
+}
+
+.c-testimonial__aside {
+}
+
+.c-testimonial__symbol {
+    display: block;
+    flex: 1 0 4rem;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - #{$c-testimonial-decorator-width} / 2);
+        width: $c-testimonial-decorator-width;
+        height: $c-testimonial-decorator-height;
+        background-color: $c-testimonial-decorator-color;
+    }
+}
+
+.c-testimonial__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(25% - 2rem);
+    left: calc(50% - 2rem);
+    width: 4rem;
+    height: 4rem;
+    background-color: $app-color-primary;
+}
+
+.o-icon--testimonial {
+    @include icon-variant(currentColor, 2.5rem);
+}

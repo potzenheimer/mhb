@@ -2,10 +2,10 @@
   "name": "mhb",
   "paths": {
     "app": "../../theme/",
-    "base": "../../resources/theme/adk.theme/",
+    "base": "../../resources/theme/mhb.theme/",
     "dev": "../../theme/_site/",
-    "dist": "../../resources/theme/adk.theme/",
-    "diazoPrefix": "/++theme++adk.theme/",
+    "dist": "../../resources/theme/mhb.theme/",
+    "diazoPrefix": "/++theme++mhb.theme/",
     "src": "node_modules/",
     "theme": "../../theme/"
   },
@@ -43,7 +43,7 @@
   "replacementPatterns": {
     "base": [
       {
-        "match": "/../../resources/theme/adk.theme/styles/",
+        "match": "/../../resources/theme/mhb.theme/styles/",
         "replacement": "/styles/"
       },
       {

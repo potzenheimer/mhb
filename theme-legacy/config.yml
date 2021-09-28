@@ -1,0 +1,5 @@
+baseURL: "/"
+languageCode: "de-de"
+title: "MHB"
+disableKinds: ["RSS", "taxonomy", "taxonomyTerm"]
+publishDir: "_site"

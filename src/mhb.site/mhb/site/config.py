@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Module providing widget setting constants"""
-from adk.site import _
+from mhb.site import _
 
 PKG_IMAGE_SCALES = ("ratio31", "collage")
 

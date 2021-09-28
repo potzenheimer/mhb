@@ -37,7 +37,8 @@ def get_localized_month_name(month):
         'November': _(u"November"),
         'December': _(u"December"),
     }
-    localized = mapping[month]
+    # localized = mapping[month]
+    localized = mapping.get(month, month)
     return localized
 
 

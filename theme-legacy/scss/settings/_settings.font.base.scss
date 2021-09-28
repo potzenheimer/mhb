@@ -1,0 +1,23 @@
+///* ========================================================================
+//   #CONFIG
+//   ======================================================================== */
+
+$app-font-size-base:        1.25rem;
+
+$app-font-size-lg:          1.5rem;
+$app-font-size-md:          1.3rem;
+$app-font-size-mds:         1.2rem;
+$app-font-size-sm:          1rem;
+
+$app-font-size-h1:          $app-font-size-base * 2.5;
+$app-font-size-h2:          $app-font-size-base * 2;
+$app-font-size-h3:          $app-font-size-base * 1.75;
+$app-font-size-h4:          $app-font-size-base * 1.5;
+$app-font-size-h5:          $app-font-size-base * 1.25;
+$app-font-size-h6:          $app-font-size-base;
+
+$app-font-family-base:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$app-font-weight-base:          500;
+$app-font-weight-strong:        700;
+$app-font-weight-italic:        400;

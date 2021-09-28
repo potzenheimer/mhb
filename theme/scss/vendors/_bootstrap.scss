@@ -13,7 +13,7 @@
 @import "bootstrap/scss/reboot";
 @import "bootstrap/scss/type";
 @import "bootstrap/scss/images";
-@import "bootstrap/scss/code";
+// @import "bootstrap/scss/code";
 @import "bootstrap/scss/grid";
 @import "bootstrap/scss/tables";
 @import "bootstrap/scss/forms";
@@ -22,12 +22,12 @@
 
 // // Components
 @import "bootstrap/scss/button-group";
-@import "bootstrap/scss/input-group";
-@import "bootstrap/scss/custom-forms";
+// @import "bootstrap/scss/input-group";
+//@import "bootstrap/scss/custom-forms";
 @import "bootstrap/scss/breadcrumb";
 
 // Utility classes
 @import "bootstrap/scss/utilities";
 
 // Reset and dependencies
-@import "bootstrap/scss/print";
+//@import "bootstrap/scss/print";
