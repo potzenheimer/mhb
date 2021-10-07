@@ -7,7 +7,7 @@
     border: 1px solid #eee;
     border-left-width: .25rem;
     @include when-inside('.app-main >') {
-        @include make-container-max-widths();
+        @include make-container();
     }
 }
 

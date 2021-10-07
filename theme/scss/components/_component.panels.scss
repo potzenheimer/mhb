@@ -26,7 +26,7 @@
 .c-panel--centered {
     margin-right: auto;
     margin-left: auto;
-    @include make-container-max-widths();
+    @include make-container();
 }
 
 .c-panel--primary {
@@ -69,7 +69,7 @@
         padding-bottom: 0;
     }
     &--container {
-        @include make-container-max-widths();
+        @include make-container();
     }
     &--centered {
         margin-left: auto;
@@ -170,7 +170,7 @@ $c-panel-controls-display:  flex;
     margin-left: auto;
     margin-right: auto;
     padding: $c-panel-actions-padding-x $c-panel-actions-padding-y;
-    // @include make-container-max-widths();
+    // @include make-container();
     &::before {
         content: "";
         display: block;
@@ -220,7 +220,7 @@ $c-panel-controls-display:  flex;
     &--centered {
         margin-right: auto;
         margin-left: auto;
-        @include make-container-max-widths();
+        @include make-container();
     }
 }
 

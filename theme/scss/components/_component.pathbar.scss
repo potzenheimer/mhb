@@ -16,7 +16,7 @@ $c-breadcrumb-font-size:                $app-font-size-sm;
     margin-left: auto;
     padding-right: $app-spacer-base;
     padding-left: $app-spacer-base;
-    @include make-container-max-widths();
+    @include make-container();
     @include when-inside('.template-frontpage-view') {
         display: none;
     }

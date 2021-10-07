@@ -302,7 +302,7 @@
             <rules css:if-not-content="#portal-column-one">
                 <drop css:theme="#app-sidebar" />
                 <replace css:content-children="#content"
-                         css:theme-children="#content"
+                         css:theme-children="#app-content"
                 />
             </rules>
             <rules css:if-content="#portal-column-one">
@@ -312,7 +312,7 @@
                 <replace css:content-children="#portal-column-one > *"
                          css:theme-children="#app-sidebar" />
                 <replace css:content-children="#content"
-                         css:theme-children="#content"
+                         css:theme-children="#app-content"
                 />
             </rules>
         </rules>
@@ -424,7 +424,7 @@
                             <xsl:attribute name="class">o-form__group form__field form__field--radio</xsl:attribute>
                         </xsl:when>
                         <xsl:when css:test="[type='checkbox']">
-                            <xsl:attribute name="class">o-form__group form__field form__field--checkbox</xsl:attribute>
+                            <xsl:attribute name="class">o-form__group o-form__field o-form__field--checkbox</xsl:attribute>
                         </xsl:when>
                         <xsl:when css:test="[type='file']">
                             <xsl:attribute name="class">o-form__group form__field form__field--file-input</xsl:attribute>

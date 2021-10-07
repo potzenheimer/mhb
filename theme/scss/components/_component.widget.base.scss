@@ -21,7 +21,7 @@
 
 
     &--header {
-        @include make-container-max-widths();
+        @include make-container();
         font-family: $app-font-family-strong;
         @include font-size(2rem);
     }

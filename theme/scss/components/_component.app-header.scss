@@ -1,6 +1,8 @@
 //
 // Header
 // ------------------------------------------
+$app-border-width:      0;
+
 .app-header {
     position: fixed;
     top: 0;
@@ -10,7 +12,7 @@
     z-index: 100;
     display: block;
     background-color: $app-color-white;
-    border-top: .25rem solid $app-color-primary;
+    border-top: $app-border-width solid $app-color-primary;
     @include media-breakpoint-up(md) {
         margin: 0 auto 1rem;
         @include when-inside('.plone-toolbar-left') {
@@ -36,7 +38,7 @@
 
 .c-header {
     padding-top: 1.5rem;
-    @include make-container-max-widths();
+    @include make-container();
 }
 
 .app-header__content {
@@ -53,7 +55,7 @@
         padding-bottom: $app-spacer-base;
         margin-right: auto;
         margin-left: auto;
-        @include make-container-max-widths();
+        @include make-container();
     }
 }
 

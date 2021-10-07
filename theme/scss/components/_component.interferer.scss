@@ -4,7 +4,7 @@
 
 // TODO: refactor when implementing real widget code
 .c-interferer--front-page {
-    @include make-container-max-widths();
+    @include make-container();
     background: url("../assets/images/static-interferer.jpg") center no-repeat;
     background-size: cover;
     min-height: 400px;
@@ -15,7 +15,7 @@
 }
 
 .c-interferer__content {
-    padding: 3rem; 
+    padding: 3rem;
     color: $app-color-white;
     position: absolute;
 	bottom: 0;
@@ -23,8 +23,8 @@
 	@include mq($from: md) {
 		padding: 6rem;
 	}
-    
-    
+
+
 }
 
 .c-interferer__header {
@@ -40,7 +40,7 @@
 	@include mq($from: lg) {
 		font-size: 2rem;
 	}
-	
+
 }
 
 .c-interferer__description {

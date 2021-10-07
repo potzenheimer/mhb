@@ -48,7 +48,7 @@ $app-main-background:               transparent;
 }
 
 .app-main--grid {
-    @include make-container-max-widths();
+    @include make-container();
     @include mq($from: lg) {
         display: flex;
         flex-wrap: wrap;

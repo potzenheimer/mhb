@@ -9,16 +9,17 @@
     user-select: none;
     border: 1px solid transparent;
     font-family: $app-font-family-strong;
-    @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
     @include transition($btn-transition);
     color: currentColor;
 
-    // Share hover and focus styles
-    @include hover-focus {
-        text-decoration: none !important;
+    &:hover {
+        color: $body-color;
+        text-decoration: if($link-hover-decoration == underline, none, null);
     }
-    &:focus,
-    &.focus {
+
+    .btn-check:focus + &,
+    &:focus {
         outline: 0;
         box-shadow: $btn-focus-box-shadow;
     }
@@ -86,11 +87,11 @@ a.c-button--active-action {
 }
 
 .c-button--sm {
-    @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $app-font-size-sm, $input-btn-line-height-sm, $btn-border-radius);
+    @include button-size($btn-padding-y, $btn-padding-x, $app-font-size-sm, $btn-border-radius);
 }
 
 .c-button--lg {
-    @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $app-font-size-lg, $input-btn-line-height-lg, $btn-border-radius);
+    @include button-size($btn-padding-y, $btn-padding-x, $app-font-size-lg, $btn-border-radius);
 }
 
 .c-button--cancel {

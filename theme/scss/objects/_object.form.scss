@@ -259,7 +259,7 @@ input, button, select, textarea {
         border: $input-border-width solid $input-border-color !important;
     }
     &:after {
-        content: url('../assets/images/icon-check.svg');
+        content: url('../assets/images/ui_check.svg');
         position: absolute;
         top: 0;
         left: .2rem;

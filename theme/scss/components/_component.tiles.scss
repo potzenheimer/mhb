@@ -12,7 +12,7 @@ $c-tile-symbol-width:               2.5rem;
 
 .c-tiles__content {
   @include make-container();
-  @include make-container-max-widths();
+  @include make-container();
 }
 
 .c-tiles__list {

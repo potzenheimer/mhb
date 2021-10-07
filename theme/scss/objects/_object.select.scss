@@ -23,7 +23,7 @@
 
     */
     &:not([multiple]) {
-        background: $custom-select-background;
+        background: $form-select-bg;
     }
     &[multiple],
     &[size]:not([size="1"]) {

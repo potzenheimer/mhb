@@ -13,7 +13,7 @@
             margin-right: auto;
             margin-left: auto;
             @include mq($from: lg) {
-                @include make-container-max-widths();
+                @include make-container();
             }
         }
     }
@@ -22,7 +22,7 @@
             margin-right: auto;
             margin-left: auto;
             @include mq($from: lg) {
-                @include make-container-max-widths();
+                @include make-container();
             }
         }
     }
@@ -60,7 +60,7 @@
 .o-page__main {
     margin-right: auto;
     margin-left: auto;
-    @include make-container-max-widths();
+    @include make-container();
 }
 
 .o-page__section {

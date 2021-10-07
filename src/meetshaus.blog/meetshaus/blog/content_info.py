@@ -41,7 +41,7 @@ class ContentInfoProvider(object):
                                           html,
                                           mimetype='text/html')
             text = stream.getData().strip()
-            body = safe_utf8(body) + ' ' + safe_utf8(text)
+            body = body + ' ' + text
         return body
 
     def reading_time(self):
