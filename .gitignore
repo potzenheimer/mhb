@@ -48,6 +48,9 @@ dist
 downloads
 eggs
 etc/**/*
+!etc/proxy_settings.conf
+!etc/disable_logging.conf
+!etc/cache_control_assets.conf
 fabfile.py
 fake-eggs
 include
