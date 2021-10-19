@@ -2,17 +2,13 @@
 """Module providing blog entry views"""
 from __future__ import division
 from past.utils import old_div
-import six
 from AccessControl import Unauthorized
 from Acquisition import aq_inner, aq_parent
-from Products.CMFCore.utils import getToolByName
-from Products.CMFPlone.utils import safe_unicode
 from Products.Five import BrowserView
 from meetshaus.blog.interfaces import IContentInfoProvider
 from meetshaus.blog.utils import get_localized_month_name
 from plone import api
-from plone.app.textfield import IRichText, IRichTextValue
-from plone.dexterity.utils import safe_utf8
+from plone.api.exc import InvalidParameterError
 from plone.event.utils import pydt
 
 
@@ -28,6 +24,27 @@ class BlogEntryView(BrowserView):
 
     def render(self):
         return self.index()
+
+    @staticmethod
+    def settings(registry_key, fallback_value=None):
+        try:
+            registry_settings = api.portal.get_registry_record(
+                'ade25.sitecontent.{0}'.format(registry_key)
+            )
+        except InvalidParameterError:
+            return fallback_value
+        return registry_settings
+
+    def panel_page_support_enabled(self):
+        context = aq_inner(self.context)
+        try:
+            from ade25.panelpage.behaviors.storage import IContentPanelStorage
+            if IContentPanelStorage.providedBy(context):
+                return True
+            else:
+                return False
+        except ImportError:
+            return False
 
     def has_headline(self):
         context = aq_inner(self.context)
@@ -65,6 +82,18 @@ class BlogEntryView(BrowserView):
         if self.has_lead_image() and context.image_display:
             return True
         return False
+
+    def image_tag(self):
+        context = aq_inner(self.context)
+        figure = context.restrictedTraverse('@@figure')(
+            image_field_name='image',
+            caption_field_name='image_caption',
+            scale=self.settings('lead_image_scale', 'ratio-4:3'),
+            aspect_ratio=self.settings('lead_image_aspect_ratio', '4/3'),
+            lqip=True,
+            lazy_load=True
+        )
+        return figure
 
     def parent_info(self):
         context = aq_inner(self.context)
