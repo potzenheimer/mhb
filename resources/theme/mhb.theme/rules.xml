@@ -142,7 +142,7 @@
         />
 
         <drop css:theme="[data-env='development']" />
-        <drop theme="/html/body/script" />
+        <!-- <drop theme="/html/body/script" /> -->
 
         <!-- Custom favicon implementation does automatically add
             favicons to the html head - we drop the Plone CMS specific implementation

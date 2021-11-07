@@ -88,8 +88,8 @@ class BlogEntryView(BrowserView):
         figure = context.restrictedTraverse('@@figure')(
             image_field_name='image',
             caption_field_name='image_caption',
-            scale=self.settings('lead_image_scale', 'ratio-4:3'),
-            aspect_ratio=self.settings('lead_image_aspect_ratio', '4/3'),
+            scale=self.settings('lead_image_scale', 'ratio-16:9'),
+            aspect_ratio=self.settings('lead_image_aspect_ratio', '16/9'),
             lqip=True,
             lazy_load=True
         )

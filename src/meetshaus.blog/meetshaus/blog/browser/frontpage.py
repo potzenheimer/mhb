@@ -98,6 +98,28 @@ class FrontPageView(BrowserView):
             return True
         return False
 
+    def has_cover_image(self, uuid):
+        context = api.content.get(UID=uuid)
+        try:
+            lead_img = context.image
+        except AttributeError:
+            lead_img = None
+        if lead_img is not None:
+            return True
+        return False
+
+    def image_tag(self, uuid):
+        context = api.content.get(UID=uuid)
+        figure = context.restrictedTraverse('@@figure')(
+            image_field_name='image',
+            caption_field_name='image_caption',
+            scale='ratio-16:9',
+            aspect_ratio='16/9',
+            lqip=True,
+            lazy_load=True
+        )
+        return figure
+
     @memoize
     def content_info_provider(self, uuid):
         context = api.content.get(UID=uuid)

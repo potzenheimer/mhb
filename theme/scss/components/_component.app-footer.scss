@@ -43,6 +43,7 @@ $app-footer-content-padding-left:               0;
     margin-left: auto;
     margin-right: auto;
     @include make-container();
+    @include make-container-max-widths();
     @include mq($from: lg) {
         padding: 0;
     }

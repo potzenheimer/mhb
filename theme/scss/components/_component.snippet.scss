@@ -1,7 +1,7 @@
 $c-snippet-display:                 flex;
 $c-snippet-aside-width:             25%;
 $c-snippet-main-width:              75%;
-$c-snippet-flex-direction:          row-reverse;
+$c-snippet-flex-direction:          row;
 $c-snippet-width:                   100%;
 $c-snippet-padding:                 $app-font-size-base;
 $c-snippet-padding-sm:              calc(#{$app-font-size-base} / 2);
@@ -77,6 +77,7 @@ $c-snippet-color:                   $app-color-text;
 
 .c-snippet__link {
     display: block;
+    text-decoration: none;
     &--abstract {
         color: $c-snippet-color;
         &:hover {

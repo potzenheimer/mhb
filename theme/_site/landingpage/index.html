@@ -16,7 +16,7 @@
 <!-- inject:svg -->
 <!-- endinject -->
 <!-- inject:css -->
-<link rel="stylesheet" href="/styles/mhb-31fdaf3902.min.css">
+<link rel="stylesheet" href="/styles/mhb-5a2861be1e.min.css">
 <!-- endinject -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -47,10 +47,13 @@
         </section>
         <section class="app-header__section app-header__section--navigation">
             <div class="o-burger">
-    <button type="button" class="o-burger__button js-nav-toggle" id="js-burger-toggle">
+    <button type="button" class="o-burger__button js-nav-toggle" id="js-burger-toggle"
+            aria-label="Menu" aria-controls="navigation">
         <span class="o-burger__text">Navigation</span>
-        <span class="o-burger__icon" id="o-burger-icon">
-            ☰
+        <span class="o-burger__icon o-burger__icon--default" id="o-burger-icon">
+            <span class="o-burger__symbol o-burger__symbol--animated">
+                <span class="o-burger__symbol-content">☰</span>
+            </span>
         </span>
     </button>
 </div>
@@ -73,335 +76,24 @@
     <ul class="c-nav" id="c-nav-list">
         <li class="c-nav__item
                     c-nav__item--hochschule c-nav__item--has-children"><a
-                href="https://staging.hfph.de/hochschule" class="c-nav__link c-nav__link--default
+                href="/about" class="c-nav__link c-nav__link--default
                     c-nav__link--state-published js-dropdown-toggle"
-                aria-haspopup="true"><span class="c-nav__link-text">Sprachschule
-                    </span><span class="c-nav__link--action">
-                      <span class="c-nav__toggle c-nav__toggle--open">
-                      <svg
-                              class="o-icon o-icon--default o-icon--circle o-icon__nav--default o-icon__ui--chevron-dims"><use
-                              xlink:href="/assets/symbol/svg/sprite.symbol.svg#ui--chevron"></use></svg></span></span></a>
-            <ul class="c-nav c-nav--level-1 c-nav__dropdown
-                        c-nav__dropdown--hidden has_subtree dropdown"
-                aria-label="submenu">
-                <li class="c-nav__item
-                    c-nav__item--portraet"><a
-                        href="https://staging.hfph.de/hochschule/portraet"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Porträt
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--studieren"><a
-                        href="https://staging.hfph.de/hochschule/studieren"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Studieren bei den Jesuiten
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--alumni"><a
-                        href="https://staging.hfph.de/hochschule/alumni" class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Unsere Alumni
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--preise"><a
-                        href="https://staging.hfph.de/hochschule/preise" class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Preise &amp; Ehrungen
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--lehrende"><a
-                        href="https://staging.hfph.de/hochschule/lehrende"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Lehrende
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--organisation"><a
-                        href="https://staging.hfph.de/hochschule/organisation"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Organisation
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--oeffentliche-veranstaltungen"><a
-                        href="https://staging.hfph.de/hochschule/oeffentliche-veranstaltungen"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Öff. Veranstaltungen
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--nachrichten"><a
-                        href="https://staging.hfph.de/hochschule/nachrichten"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Nachrichten
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--philosophie-foerdern"><a
-                        href="https://staging.hfph.de/hochschule/philosophie-foerdern"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Philosophie fördern
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--stellenangebote"><a
-                        href="https://staging.hfph.de/hochschule/stellenangebote"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Stellenangebote
-                    </span></a></li>
-            </ul>
+                aria-haspopup="true"><span class="c-nav__link-text">About
+                    </span></a>
         </li>
         <li class="c-nav__item
                     c-nav__item--studierende c-nav__item--has-children"><a
-                href="https://staging.hfph.de/studierende" class="c-nav__link c-nav__link--default
+                href="/impressum" class="c-nav__link c-nav__link--default
                     c-nav__link--state-published js-dropdown-toggle"
-                aria-haspopup="true"><span class="c-nav__link-text">Sprachkurse
-                    </span><span class="c-nav__link--action">
-                      <span class="c-nav__toggle c-nav__toggle--open">
-                      <svg
-                              class="o-icon o-icon--default o-icon--circle o-icon__nav--default o-icon__ui--chevron-dims"><use
-                              xlink:href="/assets/symbol/svg/sprite.symbol.svg#ui--chevron"></use></svg></span></span></a>
-            <ul class="c-nav c-nav--level-1 c-nav__dropdown
-                        c-nav__dropdown--hidden has_subtree dropdown"
-                aria-label="submenu">
-                <li class="c-nav__item
-                    c-nav__item--service"><a
-                        href="https://staging.hfph.de/studierende/service"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Kontakt &amp; Services
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--lehrveranstaltungen"><a
-                        href="https://staging.hfph.de/studierende/lehrveranstaltungen"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Lehrveranstaltungen
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--lernmanagement-moodle"><a
-                        href="https://staging.hfph.de/studierende/lernmanagement-moodle"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Lernmanagement Moodle
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--semestertermine"><a
-                        href="https://staging.hfph.de/studierende/semestertermine"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Semestertermine
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--downloads"><a
-                        href="https://staging.hfph.de/studierende/downloads"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Downloads &amp; Formulare
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--studentisches-leben"><a
-                        href="https://staging.hfph.de/studierende/studentisches-leben"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Studentisches Leben
-                    </span></a></li>
-            </ul>
+                aria-haspopup="true"><span class="c-nav__link-text">Impressum
+                    </span></a>
         </li>
         <li class="c-nav__item
                     c-nav__item--studieninteressierte c-nav__item--has-children">
-            <a href="https://staging.hfph.de/studieninteressierte" class="c-nav__link c-nav__link--default
+            <a href="/datenschutz" class="c-nav__link c-nav__link--default
                     c-nav__link--state-published js-dropdown-toggle"
-               aria-haspopup="true"><span class="c-nav__link-text">Sommerkurse Deutsch Intensiv
-                    </span><span class="c-nav__link--action">
-                      <span class="c-nav__toggle c-nav__toggle--open">
-                      <svg
-                              class="o-icon o-icon--default o-icon--circle o-icon--inverse o-icon__nav--default o-icon__ui--chevron-dims"><use
-                              xlink:href="/assets/symbol/svg/sprite.symbol.svg#ui--chevron"></use></svg></span></span></a>
-            <ul class="c-nav c-nav--level-1 c-nav__dropdown
-                        c-nav__dropdown--hidden has_subtree dropdown"
-                aria-label="submenu">
-                <li class="c-nav__item
-                    c-nav__item--philosophie-studieren-an-der-hfph"><a
-                        href="https://staging.hfph.de/studieninteressierte/philosophie-studieren-an-der-hfph"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Philosophie studieren an der HFPH
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--bachelor"><a
-                        href="https://staging.hfph.de/studieninteressierte/bachelor"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Bachelor Philosophie
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--master-philosophie"><a
-                        href="https://staging.hfph.de/studieninteressierte/master-philosophie"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Master Philosophie
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--zertifikat-philosophicum"><a
-                        href="https://staging.hfph.de/studieninteressierte/zertifikat-philosophicum"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Modulstudium Philosophicum
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--modulstudien-philosophie-tum"><a
-                        href="https://staging.hfph.de/studieninteressierte/modulstudien-philosophie-tum"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Modulstudien Philosophie (TUM)
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--leadership-zertifikat"><a
-                        href="https://staging.hfph.de/studieninteressierte/leadership-zertifikat"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Philosophie und Leadership
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--globale-solidaritaet"><a
-                        href="https://staging.hfph.de/studieninteressierte/globale-solidaritaet"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Globale Solidarität
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--promotion"><a
-                        href="https://staging.hfph.de/studieninteressierte/promotion"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Promotion &amp; Habilitation
-                    </span></a></li>
-            </ul>
-        </li>
-        <li class="c-nav__item
-                    c-nav__item--weiterbildung c-nav__item--has-children"><a
-                href="https://staging.hfph.de/weiterbildung" class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published js-dropdown-toggle"
-                aria-haspopup="true"><span class="c-nav__link-text">Sprachreisen
-                    </span><span class="c-nav__link--action">
-                      <span class="c-nav__toggle c-nav__toggle--open">
-                      <svg
-                              class="o-icon o-icon--default o-icon--circle o-icon--inverse o-icon__nav--default o-icon__ui--chevron-dims"><use
-                              xlink:href="/assets/symbol/svg/sprite.symbol.svg#ui--chevron"></use></svg></span></span></a>
-            <ul class="c-nav c-nav--level-1 c-nav__dropdown
-                        c-nav__dropdown--hidden has_subtree dropdown"
-                aria-label="submenu">
-                <li class="c-nav__item
-                    c-nav__item--weiterbildung-in-philosophie"><a
-                        href="https://staging.hfph.de/weiterbildung/weiterbildung-in-philosophie"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Weiterbildung in Philosophie und Ethik
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--master-ethik"><a
-                        href="https://staging.hfph.de/weiterbildung/master-ethik"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Master Ethik
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--zertifikat-ethik-des-interkulturellen-dialogs">
-                    <a href="https://staging.hfph.de/weiterbildung/zertifikat-ethik-des-interkulturellen-dialogs"
-                       class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                            class="c-nav__link-text">Zertifikat Ethik d. interkult. Dialogs
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--zertifikat-medienethik"><a
-                        href="https://staging.hfph.de/weiterbildung/zertifikat-medienethik"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Zertifikat Medienethik
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--zertifikat-medizinethik"><a
-                        href="https://staging.hfph.de/weiterbildung/zertifikat-medizinethik"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Zertifikat Medizinethik
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--zertifikat-wirtschaftsethik"><a
-                        href="https://staging.hfph.de/weiterbildung/zertifikat-wirtschaftsethik"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Zertifikat Wirtschaftsethik
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--gaststudierende"><a
-                        href="https://staging.hfph.de/weiterbildung/gaststudierende"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Gaststudierende
-                    </span></a></li>
-            </ul>
-        </li>
-        <li class="c-nav__item
-                    c-nav__item--forschung c-nav__item--has-children"><a
-                href="https://staging.hfph.de/forschung" class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published js-dropdown-toggle"
-                aria-haspopup="true"><span class="c-nav__link-text">Termine & Preise - ADK Deutschkuse 2020
-                    </span><span class="c-nav__link--action">
-                      <span class="c-nav__toggle c-nav__toggle--open">
-                      <svg
-                              class="o-icon o-icon--default o-icon--circle o-icon--inverse o-icon__nav--default o-icon__ui--chevron-dims"><use
-                              xlink:href="/assets/symbol/svg/sprite.symbol.svg#ui--chevron"></use></svg></span></span></a>
-            <ul class="c-nav c-nav--level-1 c-nav__dropdown
-                        c-nav__dropdown--hidden has_subtree dropdown"
-                aria-label="submenu">
-                <li class="c-nav__item
-                    c-nav__item--forschungsschwerpunkte"><a
-                        href="https://staging.hfph.de/forschung/forschungsschwerpunkte"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Forschungsschwerpunkte
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--wissenschaftliche-einrichtungen"><a
-                        href="https://staging.hfph.de/forschung/wissenschaftliche-einrichtungen"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Wissenschaftliche Einrichtungen
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--wissenschaftliche-veranstaltungen"><a
-                        href="https://staging.hfph.de/forschung/wissenschaftliche-veranstaltungen"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Wissenschaftliche Veranstaltungen
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--drittmittelprojekte"><a
-                        href="https://staging.hfph.de/forschung/drittmittelprojekte"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Drittmittelprojekte
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--habilitationen"><a
-                        href="https://staging.hfph.de/forschung/habilitationen"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Habilitationen
-                    </span></a></li>
-                <li class="c-nav__item
-                    c-nav__item--publikationen"><a
-                        href="https://staging.hfph.de/forschung/publikationen"
-                        class="c-nav__link c-nav__link--default
-                    c-nav__link--state-published" aria-haspopup="true"><span
-                        class="c-nav__link-text">Publikationen
-                    </span></a></li>
-            </ul>
+               aria-haspopup="true"><span class="c-nav__link-text">Datenschutz
+                    </span></a>
         </li>
     </ul>
 </nav>
@@ -415,7 +107,7 @@
     <aside class="app-sidebar" id="app-sidebar">
         <div class="o-aside" id="app-sidebar-content"></div>
     </aside>
-    <section class="app-content" id="app-content">
+    <section class="app-content o-page" id="app-content">
         <header class="o-page__header">
             <div class="c-page-header">
                 <div class="c-page-header__title">
@@ -465,5 +157,7 @@ long run.</p>
 
 </footer>
 
+
+<script type="module" src="/scripts/app.js" defer></script>
 </body>
 </html>

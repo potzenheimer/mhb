@@ -3,19 +3,11 @@
     position: relative;
     padding-right: $app-spacer-base;
     padding-left: $app-spacer-base;
+    @include padding-top($app-spacer-lg);
     width: 100%;
     @include mq($from: lg) {
         padding-right: 0;
         padding-left: 0;
-    }
-    @include when-inside('body:not(.portaltype-hph-sitecontent-mainsection)') {
-        &:not(.o-page--panels) {
-            margin-right: auto;
-            margin-left: auto;
-            @include mq($from: lg) {
-                @include make-container();
-            }
-        }
     }
     @include when-inside('body:not(.portaltype-ade25-panelpage-page)') {
         &:not(.o-page--panels) {
@@ -23,6 +15,7 @@
             margin-left: auto;
             @include mq($from: lg) {
                 @include make-container();
+                @include make-container-max-widths();
             }
         }
     }

@@ -9,7 +9,7 @@
     user-select: none;
     border: 1px solid transparent;
     font-family: $app-font-family-strong;
-    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
+    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
     @include transition($btn-transition);
     color: currentColor;
 
@@ -71,7 +71,7 @@ a.c-button--active-action {
 }
 
 .c-button--primary {
-    @include button-variant($app-color-primary, $app-color-white);
+    @include button-variant($app-color-primary, $app-color-primary);
 }
 
 .c-button--secondary {

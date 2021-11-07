@@ -2,7 +2,7 @@
 body {
     color: $element-body-color;
     background: $element-body-background;
-    @if $app-enable-responsive-font-sizes == true {
+    @if $enable-responsive-font-sizes == true {
         @include font-size($app-font-size-base);
     } @else {
         font-size: $app-font-size-base;

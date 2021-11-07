@@ -1,9 +1,9 @@
 p {
     //word-break: break-all;
     //margin-bottom: calc(#{$app-font-size-base} * 1.5);
-    margin-bottom: $app-font-size-base;
+    @include margin-bottom($app-spacer-base);
     @include when-inside('.c-snippet__section') {
-        margin-bottom: 1rem;
+        @include margin-bottom($app-spacer-base);
     }
     &.u-font-test {
         font-family: Trebuchet !important;

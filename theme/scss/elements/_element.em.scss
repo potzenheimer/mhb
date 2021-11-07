@@ -5,3 +5,9 @@ i, em {
     font-weight: $app-font-weight-italic-custom;
   }
 }
+
+h1, h2, h3, h4, h5, h6 {
+  i, em {
+    font-family: $app-headings-font-family;
+  }
+}

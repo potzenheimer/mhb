@@ -1,12 +1,10 @@
 .o-brand {
     display: block;
-    width: 160px;
-    height: 70px;
+    width: 120px;
+    height: 60px;
+    margin-left: $app-spacer-base;
     @include mq($from: md) {
         width: 320px;
         height: 90px;
-    }
-    @include mq($from: lg) {
-        margin-left: 0;
     }
 }

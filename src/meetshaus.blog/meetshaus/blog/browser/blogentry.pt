@@ -34,12 +34,12 @@
                     <div class="blog-entry__author">
                         <a class="blog-entry__link blog-entry__link--author" href="${context/portal_url}/about-me">Lisa Figas</a>
                     </div>
-                    <div class="app-timestamp">
-                        <div class="app-timestamp__day app-date__day--dot">
-                            <div class="app-timestamp__day_title">${ts/day}</div>
+                    <div class="o-timestamp">
+                        <div class="o-timestamp__day app-date__day--dot">
+                            <div class="o-timestamp__day_title">${ts/day}</div>
                         </div>
-                        <div class="app-timestamp__month">${ts/month}</div>
-                        <div class="app-timestamp__year">${ts/year}</div>
+                        <div class="o-timestamp__month">${ts/month}</div>
+                        <div class="o-timestamp__year">${ts/year}</div>
                     </div>
                     <div class="blogentry-aside-section">
                         <div class="blog-entry__title--sm">Lesezeit:</div>

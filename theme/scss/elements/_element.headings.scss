@@ -3,7 +3,7 @@
 //
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    margin-bottom: $app-headings-margin-bottom;
+    @include margin-bottom($app-headings-margin-bottom);
     font-family: $app-headings-font-family;
     font-weight: $app-headings-font-weight;
     line-height: $app-headings-line-height;

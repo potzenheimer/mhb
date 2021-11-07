@@ -2,6 +2,7 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
       lang="en"
      metal:use-macro="context/main_template/macros/master"
      i18n:domain="meethaus.blog">
@@ -10,91 +11,74 @@
 <metal:main fill-slot="main">
     <metal:content-core define-macro="main">
 
-        <div class="app-page__content--blog blogentry-list" id="content-core"
-             tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+
+        <div class="o-page__main o-page__main--panels"
+            tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
                         Batch python:modules['Products.CMFPlone'].Batch;
                         b_size python:10;b_start python:0;b_start request/b_start | b_start;">
 
-            <div class="blog-list" tal:define="batch view/batch">
-                <div class="blog-list__item" tal:repeat="item batch">
-                    <div class="app-grid" tal:define="item_uid item/UID;">
-                        <div class="app-grid__item--w25">
-                            <div class="blog-entry__meta">
-                                <div class="blogentry-aside blog-entry__aside" id="blogentry-aside">
-                                    <div class="blogentry-aside-section"
-                                         tal:define="ts python:view.time_stamp(item_uid)">
-                                        <div class="app-page__timestamp app-page__timestamp--lg blogentry-aside" id="blogentry-aside">
-                                            <div class="blogentry-aside-section hidden-xs">
-                                                <div class="app-timestamp">
-                                                    <div class="app-timestamp__day app-date__day--dot">
-                                                        <div class="app-timestamp__day_title">${ts/day}</div>
-                                                    </div>
-                                                    <div class="app-timestamp__month">${ts/month}</div>
-                                                    <div class="app-timestamp__year">${ts/year}</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <section class="app-page__main blog-entry__main" tal:define="categories item/subjects|nothing"
-                                     tal:condition="categories">
-                                    <div class="blog-entry__title--sm blog-entry__title--author">Von</div>
-                                    <div class="blog-entry__author">
-                                        <a class="blog-entry__link blog-entry__link--author" href="${context/portal_url}/about-me">Lisa Figas</a>
-                                    </div>
-                                    <div class="blog-entry__title--sm">Abgelegt unter</div>
-                                    <div class="blog-entry__tags">
-                                            <span tal:repeat="category categories">
-                                              <a href=""
-                                                 class="blog-entry__tag blogentry-aside-category"
-                                                 rel="nofollow"
-                                                   tal:content="category"
-                                                   tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/blog/thema/${category}">
-                                                Category
-                                              </a><tal:separator condition="not: repeat/category/end">,</tal:separator>
-                                            </span>
-                                    </div>
-                                    <div class="blogentry-aside-section">
-                                        <div class="blog-entry__title--sm">Lesezeit:</div>
-                                        <p class="blog-entry__reading-time">
-                                            <span tal:replace="python:view.reading_time(item_uid)" />
-                                            <span i18n:translate="">min</span>
-                                        </p>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                        <div class="app-grid__item--w75">
-                            <div class="blog-entry__content">
-                                <div class="app-page__title">
-                                    <h1 class="app-page__headline blog-entry__title blog-entry__title--secondary" tal:condition="python:view.has_headline(item_uid)">
-                                        <a tal:attributes="href item/getURL" tal:content="structure python:item.headline">${item/headline}</a>
-                                    </h1>
-                                    <h1 class="app-page__headline blog-entry__title blog-entry__title--secondary" tal:condition="not:python:view.has_headline(item_uid)">
-                                        <a tal:attributes="href item/getURL">${item/Title}</a>
-                                    </h1>
-                                </div>
-                                <p class="app-page__abstract" tal:condition="python:view.has_abstract(item_uid)">
-                                    ${item/abstract}
-                                </p>
-                                <tal:abstract tal:condition="not:python:view.has_abstract(item_uid)">
-                                    <p class="app-page__abstract  blog-entry__abstract" tal:condition="item/Description">
-                                        ${item/Description}
-                                    </p>
-                                </tal:abstract>
-                                <section class="app-page__section app-page__body">
-                                    <tal:excerpt tal:replace="structure python:view.post_content_snippet(item_uid)"></tal:excerpt>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <tal:batchnavigation
-                    define="batchnavigation nocall:context/@@batchnavigation"
-                    replace="structure python:batchnavigation(batch)" />
+            <section class="o-page__section o-page__section--main-content" tal:define="batch python:view.batch()">
 
-            </div>
+                <div class="c-list">
+                    <div class="c-list__item" tal:repeat="item batch">
+                        <div class="c-snippet c-snippet--default"
+                            tal:define="item_uid python:item.UID; item_url python:item.getURL()">
+                            <div class="c-snippet__main c-snippet__main--grid-item">
+                                <div class="c-snippet__header">
+                                    <h2 class="c-snippet__title" tal:condition="python:view.has_headline(item_uid)">
+                                        <a class="c-snippet__link" tal:attributes="href item_url"
+                                                 tal:content="structure python:item.headline">
+                                                <tal:headline tal:condition="python:view.has_headline(item_uid)" tal:content="structure python:item.headline">
+                                                    Headline
+                                                </tal:headline>
+                                                <tal:title  tal:condition="python:view.has_headline(item_uid)" tal:content="structure python:item.Title">
+                                                    Title
+                                                </tal:title>
+                                        </a>
+                                    </h2>
+                                </div>
+                                <div class="c-snippet__section">
+                                    <div class="c-snippet__abstract">
+                                        <a class="c-snippet__link c-snippet__link--abstract"
+                                                 tal:attributes="href item_url">
+                                            <tal:abstract tal:condition="python:view.has_abstract(item_uid)"
+                                                tal:content="python:item.abstract">
+                                                    ${item/abstract}
+                                            </tal:abstract>
+                                            <tal:noabstract tal:condition="not:python:view.has_abstract(item_uid)">
+                                                <span tal:condition="python:item.Description" tal:replace="python:item.Description">
+                                                        Description
+                                                </span>
+                                            </tal:noabstract>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="c-snippet__footer">
+                                    <a class="c-snippet__link c-snippet__link--footer" tal:attributes="href item_url">
+                                        Weiterlesen
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="c-snippet__aside" tal:condition="python:view.has_cover_image(item_uid)">
+                                <div class="c-snippet__figure c-snippet__figure--constrained-width-md"
+                                         tal:define="responsive_image python:view.image_tag(item_uid)">
+                                    <a class="c-snippet__link c-snippet__link--figure" tal:attributes="href item_url">
+                                        <span tal:replace="structure responsive_image" />
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                </div>
+
+
+                <tal:batchnavigation
+                        define="batchnavigation nocall:context/@@batchnavigation"
+                        replace="structure python:batchnavigation(batch)" />
+            </section>
+
         </div>
+
 
     </metal:content-core>
 </metal:main>

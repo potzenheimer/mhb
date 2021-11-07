@@ -74,7 +74,7 @@ $app-color-primary-light:             lighten($app-color-primary-base, 7.5%) !de
 $app-color-primary-lighter:           lighten($app-color-primary-base, 15%) !default;
 
 //** Secondary brand color
-$app-color-secondary-base:              $color-shiraz !default;
+$app-color-secondary-base:              $color-seagull !default;
 $app-color-secondary-darker:            darken($app-color-secondary-base, 15%)  !default;
 $app-color-secondary-dark:              darken($app-color-secondary-base, 7.5%) !default;
 $app-color-secondary:                   $app-color-secondary-base               !default; // #588c73
@@ -84,4 +84,4 @@ $app-color-secondary-lighter:           lighten($app-color-secondary-base, 15%) 
 
 //** Brand primary color schema used as default
 $app-color-default:                 $app-color-primary-base;
-$app-color-danger:                  $color-shiraz;
+$app-color-danger:                  $color-seagull;

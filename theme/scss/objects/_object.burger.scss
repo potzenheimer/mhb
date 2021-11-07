@@ -5,8 +5,9 @@
     z-index: 9001;
     display: $o-burger-display;
     margin-top: $o-burger-margin-top;
-    @include mq($from: xl) {
+    @include mq($from: md) {
         margin-top: 0;
+        right: $app-spacer-base;
     }
     @include mq($from: navbar) {
         display: none;

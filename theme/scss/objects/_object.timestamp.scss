@@ -1,0 +1,6 @@
+$o-timestamp-font-size: $app-font-size-sm;
+
+.o-timestamp {
+  display: flex;
+  @include font-size($o-timestamp-font-size);
+}

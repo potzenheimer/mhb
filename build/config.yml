@@ -16,6 +16,7 @@ application:
       - flickity/dist/flickity.pkgd.js
       - fontfaceobserver/fontfaceobserver.js
       - lazysizes/lazysizes-umd.js
+      - lazysizes/lazysizes.js
       - lazysizes/plugins/parent-fit/ls.parent-fit.js
       - requirejs/require.js
       - respimage/respimage.js
@@ -27,9 +28,11 @@ application:
       - dropmic/dist/dropmic.js
     app:
       - scripts/accordion.js
+      - scripts/app.js
       - scripts/app.umd.js
       - scripts/collapsible.js
       - scripts/navbar.js
+      - scripts/navigation.js
       - scripts/paneleditor.js
       - scripts/polyfills.js
       - scripts/slider.js

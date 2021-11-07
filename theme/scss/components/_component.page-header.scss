@@ -1,6 +1,6 @@
 $c-page-header-margin-bottom:                   1.5rem;
 $c-page-header-font-size-base:                  1.25rem;
-$c-page-header-font-size-lg:                    1.5rem;
+$c-page-header-font-size-lg:                    1.75rem;
 $c-page-header-font-weight:                     500;
 $c-page-header-line-height:                     1.5;
 
@@ -10,7 +10,7 @@ $c-page-header-line-height:                     1.5;
 }
 
 .c-page-header__title {
-    margin-bottom: 1.5rem;
+    @include margin-bottom($c-page-header-margin-bottom);
 }
 
 .c-page-header__headline {
@@ -26,4 +26,10 @@ $c-page-header-line-height:                     1.5;
     @include font-size($c-page-header-font-size-lg);
     font-weight: $c-page-header-font-weight;
     line-height: $c-page-header-line-height;
+}
+
+.c-page-header__meta {
+    width: 100%;
+    @include font-size($c-page-header-font-size-base);
+    display: flex;
 }
