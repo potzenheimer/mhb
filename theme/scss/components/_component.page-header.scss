@@ -1,7 +1,7 @@
 $c-page-header-margin-bottom:                   1.5rem;
 $c-page-header-font-size-base:                  1.25rem;
-$c-page-header-font-size-lg:                    1.75rem;
-$c-page-header-font-weight:                     500;
+$c-page-header-font-size-lg:                    2rem;
+$c-page-header-font-weight:                     400;
 $c-page-header-line-height:                     1.5;
 
 .c-page-header {
@@ -29,7 +29,15 @@ $c-page-header-line-height:                     1.5;
 }
 
 .c-page-header__meta {
-    width: 100%;
-    @include font-size($c-page-header-font-size-base);
     display: flex;
+    align-items: center;
+    width: 100%;
+    @include padding-bottom($app-spacer-base);
+    @include font-size($c-page-header-font-size-base);
+
+    > * {
+        @include padding-right($app-spacer-sm);
+    }
+
+    color: $app-color-secondary;
 }

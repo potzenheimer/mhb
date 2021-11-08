@@ -1,7 +1,7 @@
 .o-burger {
     position: $o-burger-position;
     top: calc(#{$app-spacer-base} * .75);
-    right: 0;
+    right: $app-spacer-sm;
     z-index: 9001;
     display: $o-burger-display;
     margin-top: $o-burger-margin-top;

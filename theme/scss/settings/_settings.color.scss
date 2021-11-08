@@ -55,18 +55,18 @@ $app-color-gray-lightest:				    $color-wild-sand;
 $app-color-white:                        #fff !default;
 
 // Main text color value (initially setup to mirror bootstraps gray 900 color
-$app-color-text:                        #333;
+$app-color-text:                        $color-shark;
 
 // Alternative contrast colors used with the main project color backgrounds
 $app-color-gray-contrast:               $color-tundora;
-$app-color-gray-contrast-secondary:     $color-mine-shaft;
+$app-color-gray-contrast-secondary:     $color-shuttle-gray;
 
 //== Brand and Section specific variables
 //
 //## Used in mixin and modifier classes
 
 //** Primary brand color
-$app-color-primary-base:              $color-brandy-punch !default;
+$app-color-primary-base:              $color-shark !default;
 $app-color-primary-darker:            darken($app-color-primary-base, 15%)  !default;
 $app-color-primary-dark:              darken($app-color-primary-base, 7.5%) !default;
 $app-color-primary:                   $app-color-primary-base               !default; // #274d38
@@ -74,7 +74,7 @@ $app-color-primary-light:             lighten($app-color-primary-base, 7.5%) !de
 $app-color-primary-lighter:           lighten($app-color-primary-base, 15%) !default;
 
 //** Secondary brand color
-$app-color-secondary-base:              $color-seagull !default;
+$app-color-secondary-base:              $color-shuttle-gray !default;
 $app-color-secondary-darker:            darken($app-color-secondary-base, 15%)  !default;
 $app-color-secondary-dark:              darken($app-color-secondary-base, 7.5%) !default;
 $app-color-secondary:                   $app-color-secondary-base               !default; // #588c73

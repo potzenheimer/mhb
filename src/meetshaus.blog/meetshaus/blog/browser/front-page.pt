@@ -24,6 +24,13 @@
                         <div class="c-snippet c-snippet--default"
                             tal:define="item_uid python:item.UID; item_url python:item.getURL()">
                             <div class="c-snippet__main c-snippet__main--grid-item">
+                                <div class="c-snippet__kicker" tal:define="ts python:view.time_stamp(item_uid)">
+                                    <a class="c-snippet__link c-snippet__link--footer" tal:attributes="href item_url">
+                                        <span tal:replace="python:ts['day']" />.
+                                        <span tal:replace="python:ts['month']" />
+                                        <span tal:replace="python:ts['year']" />
+                                    </a>
+                                </div>
                                 <div class="c-snippet__header">
                                     <h2 class="c-snippet__title" tal:condition="python:view.has_headline(item_uid)">
                                         <a class="c-snippet__link" tal:attributes="href item_url"
@@ -52,11 +59,6 @@
                                             </tal:noabstract>
                                         </a>
                                     </div>
-                                </div>
-                                <div class="c-snippet__footer">
-                                    <a class="c-snippet__link c-snippet__link--footer" tal:attributes="href item_url">
-                                        Weiterlesen
-                                    </a>
                                 </div>
                             </div>
                             <div class="c-snippet__aside" tal:condition="python:view.has_cover_image(item_uid)">

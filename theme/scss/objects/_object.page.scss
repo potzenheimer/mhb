@@ -1,13 +1,19 @@
 .o-page {
     display: block;
     position: relative;
-    padding-right: $app-spacer-base;
-    padding-left: $app-spacer-base;
-    @include padding-top($app-spacer-lg);
+    padding-right: .25rem;
+    padding-left: .25rem;
     width: 100%;
     @include mq($from: lg) {
-        padding-right: 0;
-        padding-left: 0;
+        @include padding-top($app-spacer-lg);
+        @include padding-right($app-spacer-base);
+        @include padding-left($app-spacer-base);
+        margin-right: auto;
+        margin-left: auto;
+        @include mq($from: lg) {
+            @include make-container();
+            @include make-container-max-widths();
+        }
     }
     @include when-inside('body:not(.portaltype-ade25-panelpage-page)') {
         &:not(.o-page--panels) {

@@ -2,9 +2,10 @@
     display: block;
     width: 120px;
     height: 60px;
-    margin-left: $app-spacer-base;
+    margin-left: $app-spacer-sm;
     @include mq($from: md) {
-        width: 320px;
-        height: 90px;
+        width: 160px;
+        height: 45px;
+        margin: $app-spacer-sm 0 $app-spacer-sm $app-spacer-base;
     }
 }

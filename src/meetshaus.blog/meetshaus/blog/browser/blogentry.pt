@@ -2,6 +2,7 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
       lang="en"
      metal:use-macro="context/main_template/macros/master"
      i18n:domain="meetshaus.blog">
@@ -29,45 +30,6 @@
                              tal:content="structure python:context.title">${context/Title}</h1>
                 </div>
 
-                <div class="c-page-header__meta">
-                    <div class="blog-entry__title--sm">Von</div>
-                    <div class="blog-entry__author">
-                        <a class="blog-entry__link blog-entry__link--author" href="${context/portal_url}/about-me">Lisa Figas</a>
-                    </div>
-                    <div class="o-timestamp">
-                        <div class="o-timestamp__day app-date__day--dot">
-                            <div class="o-timestamp__day_title">${ts/day}</div>
-                        </div>
-                        <div class="o-timestamp__month">${ts/month}</div>
-                        <div class="o-timestamp__year">${ts/year}</div>
-                    </div>
-                    <div class="blogentry-aside-section">
-                        <div class="blog-entry__title--sm">Lesezeit:</div>
-                        <p class="blog-entry__reading-time">
-                            <span tal:replace="python:view.reading_time()" /> <span i18n:translate="">min</span>
-                        </p>
-                    </div>
-                    <div class="app-socialsharing-list btn-group"
-                             tal:define="url context/absolute_url;
-                                    title context/Title;
-                                            summary context/Description | nothing">
-
-                        <a class="btn btn-socialshare btn-facebook btn-sm"
-                           target="_blank"
-                           href="https://www.facebook.com/sharer/sharer.php?u=YOUR-URL"
-                                 tal:attributes="href string:https://www.facebook.com/sharer/sharer.php?u=${url}">
-                            <i class="fa fa-facebook"></i>
-                            Share</a>
-
-                        <a class="btn btn-socialshare btn-twitter btn-sm"
-                           target="_blank"
-                           href="https://twitter.com/intent/tweet?text=YOUR-TITLE&url=YOUR-URL&via=TWITTER-HANDLE"
-                                 tal:attributes="href string:https://twitter.com/intent/tweet?text=${title}&url=${url}&via=meetshaus.de">
-                            <i class="fa fa-twitter"></i>
-                            Tweet</a>
-
-                    </div>
-                </div>
 
                 <div class="c-page-header__subtitle" tal:condition="python:context.Description()">
                     <p class="c-page-header__abstract" tal:condition="view/has_abstract"
@@ -81,6 +43,23 @@
                         </p>
                     </tal:abstract>
                 </div>
+
+                <div class="c-page-header__meta">
+                    <div class="blog-entry__author">
+                        <span class="blog-entry__title--sm">Von</span>
+                        <a class="blog-entry__link blog-entry__link--author" href="/about"
+                                 tal:attributes="href python:context.portal_url() + '/about'">Lisa Figas</a>
+                    </div>
+                    <div class="o-timestamp">
+                        <span tal:replace="python:ts['day']" />.
+                        <span tal:replace="python:ts['month']" />
+                        <span tal:replace="python:ts['year']" />
+                    </div>
+                    <div class="blogentry-aside-section o-timestamp">
+                        Lesezeit: <span tal:replace="python:view.reading_time()" /> <span i18n:translate="">min</span>
+                    </div>
+                </div>
+
             </div>
 
         </div>

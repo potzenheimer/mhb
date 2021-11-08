@@ -1,6 +1,7 @@
 i, em {
   font-family: $app-font-family-italic;
   font-weight: $app-font-weight-italic;
+  color: $app-color-secondary;
   @include when-inside('.font__primary--loaded') {
     font-weight: $app-font-weight-italic-custom;
   }

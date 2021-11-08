@@ -421,16 +421,16 @@
                 <xsl:if test="not(*[@class='widget']) and not(table)">
                     <xsl:choose>
                         <xsl:when css:test="[type='radio']">
-                            <xsl:attribute name="class">o-form__group form__field form__field--radio</xsl:attribute>
+                            <xsl:attribute name="class">o-form__group form__field o-form__field--radio</xsl:attribute>
                         </xsl:when>
                         <xsl:when css:test="[type='checkbox']">
                             <xsl:attribute name="class">o-form__group o-form__field o-form__field--checkbox</xsl:attribute>
                         </xsl:when>
                         <xsl:when css:test="[type='file']">
-                            <xsl:attribute name="class">o-form__group form__field form__field--file-input</xsl:attribute>
+                            <xsl:attribute name="class">o-form__group form__field o-form__field--file-input</xsl:attribute>
                         </xsl:when>
                         <xsl:when css:test="[type='password']">
-                            <xsl:attribute name="class">o-form__group form__field form__field--password</xsl:attribute>
+                            <xsl:attribute name="class">o-form__group form__field o-form__field--password</xsl:attribute>
                         </xsl:when>
                     </xsl:choose>
                 </xsl:if>

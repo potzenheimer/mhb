@@ -2,5 +2,6 @@ $o-timestamp-font-size: $app-font-size-sm;
 
 .o-timestamp {
   display: flex;
+  margin-right: 0.125rem;
   @include font-size($o-timestamp-font-size);
 }

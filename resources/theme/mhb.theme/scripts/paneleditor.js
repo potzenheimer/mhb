@@ -1,10 +1,6 @@
-define([
-    "/scripts/utils.js"
-], function(utils) {
+function panelEditor() {
 
-    var panelEditor = {};
-
-    var _defaults = {
+    var _panelEditorSettings = {
         widgetSelectForm: 'js-widget-select-form',
         widgetSelectable: '.js-widget-selectable',
         widgetSelected: 'c-widget-selector__item--selected',
@@ -30,19 +26,14 @@ define([
         });
     }
 
-    function initializePanelEditor(options) {
-        // Widget Selector
+    function initialisePanelEditor(options) {
         widgetSelector(options);
-
     }
 
-    panelEditor.init = function (_options) {
-        // Initialize here
-        let options = utils.extendDefaultOptions(_defaults, _options);
-        return initializePanelEditor(options);
-    };
+    initialisePanelEditor(_panelEditorSettings);
 
-    // return init;
-    return panelEditor;
+}
 
+document.addEventListener("DOMContentLoaded", () => {
+    panelEditor();
 });
