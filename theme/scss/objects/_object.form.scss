@@ -261,7 +261,7 @@ input, button, select, textarea {
     &:after {
         content: url('../assets/images/ui_check.svg');
         position: absolute;
-        top: 0;
+        top: -0.125rem;
         left: .2rem;
         z-index: 1;
         font-size: 1.3em;
@@ -285,7 +285,7 @@ input, button, select, textarea {
     transform: scale(1);
 }
 .o-form__control--checkbox:checked + label:before {
-    background-image: linear-gradient(135deg, theme-color("primary"), theme-color("primary"));
+    background-image: linear-gradient(135deg, $app-color-primary, $app-color-primary);
 }
 /* disabled checkbox */
 .o-form__control--checkbox:disabled:not(:checked) + label:before,

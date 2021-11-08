@@ -6854,7 +6854,7 @@ input, button, select, textarea {
 .o-form__control--checkbox + label:after {
   content: url("../assets/images/ui_check.svg");
   position: absolute;
-  top: 0;
+  top: -0.125rem;
   left: .2rem;
   z-index: 1;
   font-size: 1.3em;
@@ -6885,8 +6885,8 @@ input, button, select, textarea {
 }
 
 .o-form__control--checkbox:checked + label:before {
-  background-image: -webkit-linear-gradient(315deg, theme-color("primary"), theme-color("primary"));
-  background-image: linear-gradient(135deg, theme-color("primary"), theme-color("primary"));
+  background-image: -webkit-linear-gradient(315deg, #212529, #212529);
+  background-image: linear-gradient(135deg, #212529, #212529);
 }
 
 /* disabled checkbox */
@@ -7586,6 +7586,7 @@ input, button, select, textarea {
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
   white-space: normal;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -9819,7 +9820,7 @@ a.c-button--active-action {
 .c-card__header {
   font-family: "Montserrat";
   font-size: 1.875rem;
-  font-weight: 700;
+  font-weight: 300;
   padding: calc(1.5rem * 1.5 / 2);
   background: #fff;
 }
