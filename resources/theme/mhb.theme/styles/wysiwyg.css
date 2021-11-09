@@ -4476,6 +4476,24 @@ a:not(class):hover {
   color: #484c50;
 }
 
+.c-text-block a:not(class) {
+  font-weight: 600;
+  color: #5a5f64;
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.c-text-block a:not(class):hover {
+  color: #484c50;
+}
+
 img {
   max-width: 100%;
   -o-object-fit: contain;

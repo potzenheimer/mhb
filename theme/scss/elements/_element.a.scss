@@ -13,4 +13,25 @@ a:not(class) {
             color: $app-color-secondary-dark;
         }
     }
+    @include when-inside('.c-text-block') {
+        font-weight: 600;
+        color: $app-color-secondary;
+        &:hover {
+            color: $app-color-secondary-dark;
+        }
+
+        /* These are technically the same, but use both */
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+
+        /* Instead use this non-standard one: */
+        word-break: break-word;
+
+        /* Adds a hyphen where the word breaks, if supported (No Blink) */
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+
+    }
 }
