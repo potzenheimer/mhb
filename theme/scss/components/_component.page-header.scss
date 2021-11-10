@@ -30,6 +30,7 @@ $c-page-header-line-height:                     1.5;
 
 .c-page-header__meta {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
     @include padding-bottom($app-spacer-base);
@@ -37,6 +38,9 @@ $c-page-header-line-height:                     1.5;
 
     > * {
         @include padding-right($app-spacer-sm);
+        &:first-child {
+            flex: 0 0 100%;
+        }
     }
 
     color: $app-color-secondary;
