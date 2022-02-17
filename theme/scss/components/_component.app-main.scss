@@ -29,15 +29,6 @@ $app-main-background:               transparent;
     @include mq($from: md) {
         background: $app-main-background;
     }
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100vw;
-        height: $app-main-padding-bottom;
-        background: url('/assets/images/skyline.png') repeat-x 0 100% transparent;
-    }
     @include mq($from: navbar) {
         padding-top: 0;
     }

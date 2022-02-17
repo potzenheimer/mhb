@@ -7410,16 +7410,6 @@ input, button, select, textarea {
   }
 }
 
-.app-main::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  height: calc(calc(1.5rem * 1.5) * 2);
-  background: url("/assets/images/skyline.png") repeat-x 0 100% transparent;
-}
-
 @media (min-width: 62499.9375em) {
   .app-main {
     padding-top: 0;
