@@ -1,0 +1,8 @@
+<script src="https://unpkg.com/@telemetrydeck/sdk/dist/telemetrydeck.min.js" defer></script>
+<script>
+    // This will send a TelemetrDeck signal of type "pageLoad" every time the page loads
+    // It will automatically include the current URL in the payload, as well as the user
+    // agent string, platform, and locale.
+    window.td = window.td || [];
+    td.push(['app', '6D371B8B-9F26-4CCC-874D-C7263F1B1481'], ['user', 'anonymous'], ['pageLoad']);
+</script>
